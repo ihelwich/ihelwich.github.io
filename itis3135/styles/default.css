@@ -1,7 +1,15 @@
+/*
+Color Scheme:
+Black: #0a0908
+Chocolate Cosmos: #49111c
+White Smoke: #f2f4f3
+Beaver: #a9927d
+*/
+
 body{
     text-align: center;
-    background-color: #e0ddcf;
-    color: #474448;
+    background-color: #a9927d;
+    color: #0a0908;
     font-family: garamond, serif;
 }
 
@@ -18,5 +26,5 @@ figure img{
 }
 
 a{
-    color: #8e44ad;
+    color: #49111c;
 }
