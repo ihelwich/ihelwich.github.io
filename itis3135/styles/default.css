@@ -28,3 +28,9 @@ figure img{
 a{
     color: #49111c;
 }
+
+img{
+    border: 0;
+    width: 88px;
+    height: 31px;
+}
