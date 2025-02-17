@@ -1,0 +1,36 @@
+/*
+Color Scheme:
+White: #FFFFFF
+English Violet: #45364B;
+Cool Gray: #8C93A8;
+Raisin Black: #2D2327;
+*/
+
+body{
+    text-align: center;
+    background-color: #a9927d;
+    color: #0a0908;
+    font-family: garamond, serif;
+}
+
+ul{
+    text-align: left;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+a{
+    color: #49111c;
+}
+
+a img{
+    border: 0;
+    width: 88px;
+    height: 31px;
+}
+
+.validation-links{
+    color: #a9927d;
+}
