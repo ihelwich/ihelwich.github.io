@@ -6,13 +6,6 @@ White Smoke: #f2f4f3
 Beaver: #a9927d
 */
 
-body{
-    text-align: center;
-    background-color: #a9927d;
-    color: #0a0908;
-    font-family: garamond, serif;
-}
-
 ul{
     text-align: left;
 }
@@ -31,6 +24,11 @@ a img{
     height: 31px;
 }
 
-script{
-    color: #a9927d;
+body{
+    text-align: center;
+    background-color: #a9927d;
+    color: #0a0908;
+    font-family: garamond, serif;
+    width: 1000px;
+    margin: 0 auto;
 }

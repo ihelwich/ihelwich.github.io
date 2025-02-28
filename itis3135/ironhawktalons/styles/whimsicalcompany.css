@@ -6,6 +6,10 @@ Cool Gray: #8C93A8;
 Raisin Black: #2D2327;
 */
 
+a{
+    color: #45364B;
+}
+
 header{
     background-color: #8C93A8;
     position: fixed;
@@ -19,17 +23,8 @@ main{
 }
 
 body{
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
     text-align: center;
     color: #2D2327;
-}
-
-a{
-    color: #45364B;
-}
-
-.validation-links{
-    color: #FFFFFF;
+    width: 1000px;
+    margin: 0 auto;
 }
