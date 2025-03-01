@@ -12,8 +12,9 @@ a{
 
 header{
     background-color: #8C93A8;
+    position: fixed;
     text-align: center;
-    width: 100%;
+    width: 1000px;
     padding-bottom: 20px;
 }
 
