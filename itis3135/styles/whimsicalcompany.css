@@ -12,7 +12,6 @@ a{
 
 header{
     background-color: #8C93A8;
-    position: fixed;
     text-align: center;
     width: 1000px;
     padding-bottom: 20px;
@@ -30,8 +29,4 @@ body{
     color: #2D2327;
     width: 1000px;
     margin: 0 auto;
-}
-
-h2{
-    font-size: 500px;
 }
