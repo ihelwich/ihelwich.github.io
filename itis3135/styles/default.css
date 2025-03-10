@@ -24,6 +24,12 @@ a img{
     height: 31px;
 }
 
+main {
+    max-width: 1200px; /* Adjust as needed */
+    width: 90%; /* Adjust percentage based on design requirements */
+    margin: 0 auto; /* Centers the content horizontally */
+}
+
 body{
     text-align: center;
     background-color: #a9927d;
@@ -31,4 +37,23 @@ body{
     font-family: garamond, serif;
     width: 1000px;
     margin: 0 auto;
+}
+
+/* Rule Overrides For Laptops / Small Screens */
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    html {
+        font-size: 100%;
+    }
+}
+/* Rule Overrides For Tablet Devices */
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    #colorbox {
+        font-size: 80%;
+    }
+}
+/* Rule Overrides For Mobile Devices */
+@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+    #colorbox {
+        font-size: 90%;
+    }
 }
