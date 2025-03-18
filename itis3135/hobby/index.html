@@ -121,80 +121,50 @@ Beige: #EAF0CE
             const why = document.getElementById("why");
             const how = document.getElementById("how");
             const prompts = document.getElementById("prompts");
+
             const sections = [home, who, when, where, why, how, prompts];
 
+            function hideAllSections() {
+                sections.forEach(section => section.style.display = "none");
+            }
+
             function toggleHome(){
+                hideAllSections();
                 home.style.display = "block";
-                who.style.display = "none";
-                when.style.display = "none";
-                where.style.display = "none";
-                why.style.display = "none";
-                how.style.display = "none";
-                prompts.style.display = "none";
             }
 
             function toggleWho(){
-                home.style.display = "none";
+                hideAllSections();
                 who.style.display = "block";
-                when.style.display = "none";
-                where.style.display = "none";
-                why.style.display = "none";
-                how.style.display = "none";
-                prompts.style.display = "none";
             }
 
             function toggleWhen(){
-                home.style.display = "none";
-                who.style.display = "none";
+                hideAllSections();
                 when.style.display = "block";
-                where.style.display = "none";
-                why.style.display = "none";
-                how.style.display = "none";
-                prompts.style.display = "none";
             }
 
             function toggleWhere(){
-                home.style.display = "none";
-                who.style.display = "none";
-                when.style.display = "none";
+                hideAllSections();
                 where.style.display = "block";
-                why.style.display = "none";
-                how.style.display = "none";
-                prompts.style.display = "none";
             }
 
             function toggleWhy(){
-                home.style.display = "none";
-                who.style.display = "none";
-                when.style.display = "none";
-                where.style.display = "none";
+                hideAllSections();
                 why.style.display = "block";
-                how.style.display = "none";
-                prompts.style.display = "none";
             }
             
             function toggleHow(){
-                home.style.display = "none";
-                who.style.display = "none";
-                when.style.display = "none";
-                where.style.display = "none";
-                why.style.display = "none";
+                hideAllSections();
                 how.style.display = "block";
-                prompts.style.display = "none";
             }
 
             function togglePrompts(){
-                home.style.display = "none";
-                who.style.display = "none";
-                when.style.display = "none";
-                where.style.display = "none";
-                why.style.display = "none";
-                how.style.display = "none";
+                hideAllSections();
                 prompts.style.display = "block";
             }
 
             homeButton.addEventListener("click", toggleHome);
-            howButton.addEventListener("click", toggleWho);
+            whoButton.addEventListener("click", toggleWho);
             whenButton.addEventListener("click", toggleWhen);
             whereButton.addEventListener("click", toggleWhere);
             whyButton.addEventListener("click", toggleWhy);
