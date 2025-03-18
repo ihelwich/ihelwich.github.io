@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+Color scheme:
+Engineering Orange: #BF0000
+Raisin Black: #2E282A
+Beige: #EAF0CE
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITIS 3135 | Isaiah Helwich's | Iron Hawk | Charlotte Boxing Club</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        button{
+            background-color: #EAF0CE;
+            color: #BF0000;
+        }
+
+        ul{
+            padding-left: 350px;
+            text-align: left;
+            max-width: 450px;
+        }
+
+        p{
+            padding: 0px 100px 0px 100px;
+        }
+
+        body{
+            text-align: center;
+            background-color: #2E282A;
+            color: #EAF0CE;
+            font-family: garamond, serif;
+            width: 1000px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Charlotte Boxing Club</h1>
+        <nav>
+            <button onclick="unhide()">Home</button>
+            <button onclick="unhide()">Who We Are</button>
+            <button>Schedule</button>
+            <button>Location</button>
+            <button>How It's Done</button>
+            <button>Why We Do It</button>
+            <button>AI Prompts</button>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Step into the ring with Charlotte Boxing Club and discover the art of boxing like never before! Our program not only teaches the fundamentals—footwork, punching, and defensive techniques—but also provides a full-body workout that boosts confidence, relieves stress, and keeps you in peak shape. Whether you're looking to stay active, challenge yourself, or build new friendships in a supportive environment, Charlotte Boxing Club is the place to be. Join now and unleash your potential—no experience needed!</p>
+        </section>
+        <section id="who">
+            <h2>Who We Are</h2>
+            <p>Welcome to Charlotte Boxing Club! We are a student-run organization dedicated to building strength, discipline, and community through the sport of boxing. Whether you're a seasoned competitor or a complete beginner, our club provides a supportive environment to train, learn technique, and push your limits. We focus on skill development, conditioning, and sparring for those who are interested, all while fostering a positive and inclusive atmosphere. Join us for structured workouts, coaching, and the chance to connect with fellow students who share a passion for the sport. No experience? No problem—just bring your enthusiasm and a willingness to work hard!</p>
+        </section>
+        <section id="when">
+            <h2>Schedule</h2>
+            <ul>
+                <li>Monday: 4-7pm / 8-10pm</li>
+                <li>Tuesday: 8-11pm</li>
+                <li>Wednesday: 8-10pm</li>
+                <li>Thursday: 8-11pm</li>
+                <li>Friday: 6-9am</li>
+            </ul>
+        </section>
+        <section id="where">
+            <h2>Location</h2>
+            <ul>
+                <li>Monday: Belk Gym Room 011 / 020</li>
+                <li>Tuesday: UREC Mat Room 2</li>
+                <li>Wednesday: Belk Gym Room 011 / 020</li>
+                <li>Thursday: UREC Mat Room 2</li>
+                <li>Friday: Hauser Alumni Pavilion</li>
+            </ul>
+        </section>
+        <section id="how">
+            <h2>How It's Done</h2>
+            <p>At our college boxing club, we focus on building strong fundamentals while fostering a supportive and disciplined training environment. Our coaching approach combines technical instruction, strength and conditioning, and strategic sparring to help members develop their skills safely and effectively. Beginners start with footwork, proper punching techniques, and defensive movements before progressing to controlled partner drills and optional sparring sessions. Advanced boxers refine their technique through intensive mitt work, bag training, and tactical sparring. Whether you're here to compete or just to stay in shape, our structured training sessions ensure steady progress, confidence, and respect for the sport.</p>
+        </section>
+        <section id="why">
+            <h2>Why We Do It</h2>
+            <p>Boxing is more than just a sport—it's a test of discipline, resilience, and self-improvement. At our college boxing club, we believe in the power of boxing to build confidence, mental toughness, and physical fitness. Whether you're stepping into the ring for competition or just training for personal growth, boxing teaches valuable lessons in perseverance, respect, and self-control. Our club provides a welcoming environment where students can challenge themselves, push their limits, and be part of a supportive community. We do it because we love the sport, and we want to share its benefits with anyone willing to put in the work.</p>
+        </section>
+        <section id="prompts">
+            <h2>AI Prompts</h2>
+            <ul>
+                <li>I'm creating a website for a generic college boxing club, write a paragraph for the "who we are" page</li>
+                <li>I'm creating a website for a generic college boxing club, write a paragraph for the "how we teach" page</li>
+                <li>I'm creating a website for a generic college boxing club, write a paragraph for the "why we do it" page</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Built by <a href="helwichco.com">Helwich &amp; Co.</a>, Certified in <a href="https://freecodecamp.org/certification/isaiahmhelwich/responsive-web-design ">Responsive Web Design</a>. &copy;2025</p>
+        <script>
+            document.getElementById("validation-link-html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+            document.getElementById("validation-link-css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+
+            const home = document.getElementById("home");
+            const who = document.getElementById("who");
+            const when = document.getElementById("when");
+            const where = document.getElementById("where");
+            const why = document.getElementById("why");
+            const how = document.getElementById("how");
+            const prompts = document.getElementById("prompts");
+
+            function unhideHome(){
+                home.removeAttribute(hidden);
+            }
+        </script>
+    </footer>
+</body>
+</html>
