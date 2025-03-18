@@ -112,7 +112,7 @@ Beige: #EAF0CE
             const sections = [home, who, when, where, why, how, prompts];
 
             function toggleHide(e){
-                for (const tag in sections){
+                for (const tag of sections){
                     if (tag.style.display === block){
                         tag.style.display = none;
                     }
