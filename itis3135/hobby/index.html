@@ -17,6 +17,10 @@ Beige: #EAF0CE
             color: #BF0000;
         }
 
+        a{
+            color: #BF0000;
+        }
+
         ul{
             padding-left: 350px;
             text-align: left;
@@ -41,13 +45,13 @@ Beige: #EAF0CE
     <header>
         <h1>Charlotte Boxing Club</h1>
         <nav>
-            <button onclick="toggleHide(home)">Home</button>
-            <button onclick="toggleHide(who)">Who We Are</button>
-            <button onclick="toggleHide(when)">Schedule</button>
-            <button onclick="toggleHide(where)">Location</button>
-            <button onclick="toggleHide(how)">How It's Done</button>
-            <button onclick="toggleHide(why)">Why We Do It</button>
-            <button onclick="toggleHide(prompts)">AI Prompts</button>
+            <button id="homeButton">Home</button>
+            <button id="whoButton">Who We Are</button>
+            <button id="whenButton">Schedule</button>
+            <button id="whereButton">Location</button>
+            <button id="whyButton">How It's Done</button>
+            <button id="howButton">Why We Do It</button>
+            <button id="promptsButton">AI Prompts</button>
         </nav>
     </header>
     <main>
@@ -102,6 +106,14 @@ Beige: #EAF0CE
             document.getElementById("validation-link-html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
             document.getElementById("validation-link-css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
 
+            const homeButton = document.getElementById("homeButton");
+            const whoButton = document.getElementById("whoButton");
+            const whenButton = document.getElementById("whenButton");
+            const whereButton = document.getElementById("whereButton");
+            const whyButton = document.getElementById("whyButton");
+            const howButton = document.getElementById("howButton");
+            const promptsButton = document.getElementById("promptsButton");
+
             const home = document.getElementById("home");
             const who = document.getElementById("who");
             const when = document.getElementById("when");
@@ -120,6 +132,14 @@ Beige: #EAF0CE
 
                 e.style.display = "block";
             }
+
+            homeButton.addEventListener("click", toggleHide(home));
+            howButton.addEventListener("click", toggleHide(who));
+            whenButton.addEventListener("click", toggleHide(when));
+            whereButton.addEventListener("click", toggleHide(where));
+            whyButton.addEventListener("click", toggleHide(why));
+            howButton.addEventListener("click", toggleHide(how));
+            promptsButton.addEventListener("click", toggleHide(prompts));
         </script>
     </footer>
 </body>
