@@ -40,6 +40,75 @@ Beige: #EAF0CE
             margin: 0 auto;
         }
     </style>
+    <script>
+        document.getElementById("validation-link-html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation-link-css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+
+        const homeButton = document.getElementById("homeButton");
+        const whoButton = document.getElementById("whoButton");
+        const whenButton = document.getElementById("whenButton");
+        const whereButton = document.getElementById("whereButton");
+        const whyButton = document.getElementById("whyButton");
+        const howButton = document.getElementById("howButton");
+        const promptsButton = document.getElementById("promptsButton");
+
+        const home = document.getElementById("home");
+        const who = document.getElementById("who");
+        const when = document.getElementById("when");
+        const where = document.getElementById("where");
+        const why = document.getElementById("why");
+        const how = document.getElementById("how");
+        const prompts = document.getElementById("prompts");
+
+        const sections = [home, who, when, where, why, how, prompts];
+
+        function hideAllSections() {
+            sections.forEach((section) => section.style.display = "none");
+        }
+
+        function toggleHome(){
+            hideAllSections();
+            home.style.display = "block";
+        }
+
+        function toggleWho(){
+            hideAllSections();
+            who.style.display = "block";
+        }
+
+        function toggleWhen(){
+            hideAllSections();
+            when.style.display = "block";
+        }
+
+        function toggleWhere(){
+            hideAllSections();
+            where.style.display = "block";
+        }
+
+        function toggleWhy(){
+            hideAllSections();
+            why.style.display = "block";
+        }
+        
+        function toggleHow(){
+            hideAllSections();
+            how.style.display = "block";
+        }
+
+        function togglePrompts(){
+            hideAllSections();
+            prompts.style.display = "block";
+        }
+
+        homeButton.addEventListener("click", toggleHome);
+        whoButton.addEventListener("click", toggleWho);
+        whenButton.addEventListener("click", toggleWhen);
+        whereButton.addEventListener("click", toggleWhere);
+        whyButton.addEventListener("click", toggleWhy);
+        howButton.addEventListener("click", toggleHow);
+        promptsButton.addEventListener("click", togglePrompts);
+    </script>
 </head>
 <body>
     <header>
@@ -102,75 +171,6 @@ Beige: #EAF0CE
     </main>
     <footer>
         <p>Built by <a href="helwichco.com">Helwich &amp; Co.</a>, Certified in <a href="https://freecodecamp.org/certification/isaiahmhelwich/responsive-web-design ">Responsive Web Design</a>. &copy;2025</p>
-        <script>
-            document.getElementById("validation-link-html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-            document.getElementById("validation-link-css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-
-            const homeButton = document.getElementById("homeButton");
-            const whoButton = document.getElementById("whoButton");
-            const whenButton = document.getElementById("whenButton");
-            const whereButton = document.getElementById("whereButton");
-            const whyButton = document.getElementById("whyButton");
-            const howButton = document.getElementById("howButton");
-            const promptsButton = document.getElementById("promptsButton");
-
-            const home = document.getElementById("home");
-            const who = document.getElementById("who");
-            const when = document.getElementById("when");
-            const where = document.getElementById("where");
-            const why = document.getElementById("why");
-            const how = document.getElementById("how");
-            const prompts = document.getElementById("prompts");
-
-            const sections = [home, who, when, where, why, how, prompts];
-
-            function hideAllSections() {
-                sections.forEach((section) => section.style.display = "none");
-            }
-
-            function toggleHome(){
-                hideAllSections();
-                home.style.display = "block";
-            }
-
-            function toggleWho(){
-                hideAllSections();
-                who.style.display = "block";
-            }
-
-            function toggleWhen(){
-                hideAllSections();
-                when.style.display = "block";
-            }
-
-            function toggleWhere(){
-                hideAllSections();
-                where.style.display = "block";
-            }
-
-            function toggleWhy(){
-                hideAllSections();
-                why.style.display = "block";
-            }
-            
-            function toggleHow(){
-                hideAllSections();
-                how.style.display = "block";
-            }
-
-            function togglePrompts(){
-                hideAllSections();
-                prompts.style.display = "block";
-            }
-
-            homeButton.addEventListener("click", toggleHome);
-            whoButton.addEventListener("click", toggleWho);
-            whenButton.addEventListener("click", toggleWhen);
-            whereButton.addEventListener("click", toggleWhere);
-            whyButton.addEventListener("click", toggleWhy);
-            howButton.addEventListener("click", toggleHow);
-            promptsButton.addEventListener("click", togglePrompts);
-        </script>
     </footer>
 </body>
 </html>
