@@ -41,17 +41,17 @@ Beige: #EAF0CE
     <header>
         <h1>Charlotte Boxing Club</h1>
         <nav>
-            <button onclick="unhide()">Home</button>
-            <button onclick="unhide()">Who We Are</button>
-            <button>Schedule</button>
-            <button>Location</button>
-            <button>How It's Done</button>
-            <button>Why We Do It</button>
-            <button>AI Prompts</button>
+            <button onclick="toggleHide(home)">Home</button>
+            <button onclick="toggleHide(who)">Who We Are</button>
+            <button onclick="toggleHide(when)">Schedule</button>
+            <button onclick="toggleHide(where)">Location</button>
+            <button onclick="toggleHide(how)">How It's Done</button>
+            <button onclick="toggleHide(why)">Why We Do It</button>
+            <button onclick="toggleHide(prompts)">AI Prompts</button>
         </nav>
     </header>
     <main>
-        <section id="home" hidden>
+        <section id="home" style=display:none>
             <h2>Home</h2>
             <p>Step into the ring with Charlotte Boxing Club and discover the art of boxing like never before! Our program not only teaches the fundamentals—footwork, punching, and defensive techniques—but also provides a full-body workout that boosts confidence, relieves stress, and keeps you in peak shape. Whether you're looking to stay active, challenge yourself, or build new friendships in a supportive environment, Charlotte Boxing Club is the place to be. Join now and unleash your potential—no experience needed!</p>
         </section>
@@ -109,9 +109,16 @@ Beige: #EAF0CE
             const why = document.getElementById("why");
             const how = document.getElementById("how");
             const prompts = document.getElementById("prompts");
+            const sections = [home, who, when, where, why, how, prompts]
 
-            function unhideHome(){
-                home.removeAttribute(hidden);
+            function toggleHide(e){
+                for(tag in sections){
+                    if(tag.style.display === block){
+                        tag.style.display = none
+                    }
+                }
+
+                e.style.display = block;
             }
         </script>
     </footer>
