@@ -123,23 +123,23 @@ Beige: #EAF0CE
             const prompts = document.getElementById("prompts");
             const sections = [home, who, when, where, why, how, prompts];
 
-            function toggleHide(e){
-                for (const tag of sections){
-                    if (tag.style.display === "block"){
-                        tag.style.display = "none";
-                    }
-                }
-
-                e.style.display = "block";
+            function toggleHome(){
+                home.style.display = "block";
+                who.style.display = "none";
+                when.style.display = "none";
+                where.style.display = "none";
+                why.style.display = "none";
+                how.style.display = "none";
+                prompts.style.display = "none";
             }
 
-            homeButton.addEventListener("click", toggleHide(home));
-            howButton.addEventListener("click", toggleHide(who));
-            whenButton.addEventListener("click", toggleHide(when));
-            whereButton.addEventListener("click", toggleHide(where));
-            whyButton.addEventListener("click", toggleHide(why));
-            howButton.addEventListener("click", toggleHide(how));
-            promptsButton.addEventListener("click", toggleHide(prompts));
+            homeButton.addEventListener("click", toggleHome(home));
+            howButton.addEventListener("click", toggleWho(who));
+            whenButton.addEventListener("click", toggleWhen(when));
+            whereButton.addEventListener("click", toggleWhere(where));
+            whyButton.addEventListener("click", toggleWhy(why));
+            howButton.addEventListener("click", toggleHow(how));
+            promptsButton.addEventListener("click", togglePrompts(prompts));
         </script>
     </footer>
 </body>
