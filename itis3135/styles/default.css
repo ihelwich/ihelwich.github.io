@@ -1,6 +1,8 @@
 /*
 Color Scheme:
 Black: #0a0908
+Black: #000000
+Outer Space: #464646
 Chocolate Cosmos: #49111c
 White Smoke: #f2f4f3
 Beaver: #a9927d
@@ -10,12 +12,18 @@ ul{
     text-align: left;
 }
 
+ol{
+    text-align: center;
+    list-style-position: inside;
+}
+
 .bold{
     font-weight: bold;
 }
 
 a{
     color: #49111c;
+    padding: 3px;
 }
 
 a img{
@@ -36,6 +44,36 @@ body{
     color: #0a0908;
     font-family: garamond, serif;
     width: 1000px;
+    margin: 0 auto;
+}
+
+tr{
+    padding: 0px 0px 0px 20px;
+}
+
+tr:nth-child(odd){
+    color: #0a0908;
+}
+
+tr:nth-child(even) {
+    color: #49111c;
+}
+
+tr:nth-child(1) {
+    color: #000000;
+}
+
+th{
+    background-color: #49111c;
+    color: #a9927d;
+}
+
+.ranks{
+    background-color: #464646;
+    color: #a9927d;
+}
+
+table{
     margin: 0 auto;
 }
 
