@@ -81,7 +81,7 @@ form{
     margin: auto;
 }
 
-label{
+label, #courses{
     font-size: 30px;
     margin-top: 20px;
     display: block; 
@@ -107,8 +107,25 @@ input{
     font-size: 25px;
 }
 
-#personal-background, #professional-background, #academic-background, #web-development-background{
+#personal-background, #professional-background, #academic-background, #web-development-background, #fun-fact, #additional-fact{
     width: 80%;
+}
+
+#course-list > li{
+    margin: 20px auto;
+}
+
+.course-code{
+    width: 20%;
+}
+
+.course-name, .course-reason{
+    width: 70%;
+}
+
+.delete-course{
+    position: relative;
+    left: 59%;
 }
 
 /* Rule Overrides For Laptops / Small Screens */
