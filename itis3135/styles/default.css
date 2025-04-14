@@ -82,12 +82,19 @@ form{
     margin: auto;
 }
 
-label, input {
+input:not(.name){
     display: block;
 }
 
-label {
+label:not(.name){
     margin-top: 20px;
+    display: block;
+}
+
+.name{
+    align-content: center;
+    justify-content: center;
+    margin: auto;
 }
 
 /* Rule Overrides For Laptops / Small Screens */
