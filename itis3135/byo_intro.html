@@ -13,21 +13,67 @@
         <h2>BYO Introduction</h2>  
         <h3>Time to build your own Intro page, please fill out the form below so we can create your own page.</h3>
         <form>
-            <label for="name">Name</label><input id="name" type="text" placeholder="Yoshikage Kira">
-            <label for="mascot">Mascot</label><input id="mascot" type="text" placeholder="Yappy Keyboards">
-            <label for="image">Image</label><input id="image" type="file">
-            <label for="image-caption">Image Caption</label><input id="image-caption" type="text">
-            <label for="personal-background">Personal Background</label><input id="personal-background" type="text" placeholder=" I'm 33 years old. My house is in the northeast section of...">
-            <label for="professional-background">Professional Background</label><input id="professional-background" type="text" placeholder="I work as an employee for the Kame Yu department stores..." required>
-            <label for="academic-background">Academic Background</label><input id="academic-background" type="text" placeholder="ITIS3135 Web-Based Application Design and Development">
-            <label for="web-Development-Background">Background in Web Development</label><input id="web-Development-Background" type="text" placeholder="2 years experience with HTML">
-            <label for="primary-computer-platform">Primary Computer Platform</label><input id="primary-computer-platform" type="text" placeholder="VAIOS SX-R Windows 10">
-            <!--Courses currently taking-->
-            <label for="fun-fact">Funny/Interesting Item to Remember me by</label><input id="fun-fact" type="text" placeholder="I've been to every BTS tour in the US">
-            <label for="additional-fact">I'd also like to Share:</label><input id="additional-fact" type="text" placeholder="I am proficient in pyrotechnics">
+            <label for="name">Full Name (First Last)</label>
+            <input id="name" type="text" placeholder="e.g. Yoshikage Kira" value="Isaiah Helwich" required>
+
+            <label for="nickname">Nickname</label>
+            <input id="nickname" type="text" placeholder="e.g. Killer Queen" value="">
+            
+            <label for="mascot">Mascot</label>
+            <input id="mascot" type="text" placeholder="e.g. Yappy Keyboards" value="Iron Hawk" required>
+            
+            <label for="image">Image</label>
+            <input id="image" type="file">
+            
+            <label for="image-caption">Image Caption</label>
+            <input id="image-caption" type="text" required>
+            
+            <label for="personal-background">Personal Background</label>
+            <input id="personal-background" type="text" placeholder="e.g. I'm 33 years old. My house is in the northeast section of..." value="I’ve lived in Charlotte my whole life. I have yet to travel outside of a few states." required>
+            
+            <label for="professional-background">Professional Background</label>
+            <input id="professional-background" type="text" placeholder="e.g. I work as an employee for the Kame Yu department stores..." value="I’ve been working at Starbucks for nearly two years." required>
+            
+            <label for="academic-background">Academic Background</label>
+            <input id="academic-background" type="text" placeholder="e.g. ITIS3135 Web-Based Application Design and Development" value="I’m pursuing a Bachelor of Science in Computer Science degree with a concentration in cyber security. I’m considering returning after for a Master’s in cyber security or possibly a different major." required>
+            
+            <label for="web-Development-Background">Background in Web Development</label>
+            <input id="web-Development-Background" type="text" placeholder="e.g. 2 years experience with HTML" value="I have experience with HTML and CSS from using freeCodeCamp a while back. I have some (but considerably less) experience with JavaScript from the same organization." required>
+            
+            <label for="primary-computer-platform">Primary Computer Platform</label>
+            <input id="primary-computer-platform" type="text" placeholder="e.g. VAIOS SX-R Windows 10" value="Windows 11 Laptop" required>
+            
+            <p>Courses I'm Taking & Why</p>
+            <ul>
+                <li>
+                    <input class="course-code" placeholder="e.g. ITIS 3135"><input class="course-name" placeholder="e.g. Web-Based Application Design and Development"><input class="reason-for-taking-course" placeholder="e.g. Required"><button class="delete-course">Delete Course</button>
+                </li>
+                <li>
+                    <input class="course-code" placeholder="e.g. ITIS 3135"><input class="course-name" placeholder="e.g. Web-Based Application Design and Development"><input class="reason-for-taking-course" placeholder="e.g. Required"><button class="delete-course">Delete Course</button>
+                </li>
+                <li>
+                    <input class="course-code" placeholder="e.g. ITIS 3135"><input class="course-name" placeholder="e.g. Web-Based Application Design and Development"><input class="reason-for-taking-course" placeholder="e.g. Required"><button class="delete-course">Delete Course</button>
+                </li>
+                <li>
+                    <input class="course-code" placeholder="e.g. ITIS 3135"><input class="course-name" placeholder="e.g. Web-Based Application Design and Development"><input class="reason-for-taking-course" placeholder="e.g. Required"><button class="delete-course">Delete Course</button>
+                </li>
+                <li>
+                    <input class="course-code" placeholder="e.g. ITIS 3135"><input class="course-name" placeholder="e.g. Web-Based Application Design and Development"><input class="reason-for-taking-course" placeholder="e.g. Required"><button class="delete-course">Delete Course</button>
+                </li>
+            </ul>
+            <button id="add-course">Add Course</button>
+    
+            <label for="fun-fact">Funny/Interesting Item to Remember me by</label>
+            <input id="fun-fact" type="text" placeholder="e.g. I've been to every BTS tour in the US" value="I’m one of the founding members of the Charlotte Boxing Club here at UNCC.">
+            
+            <label for="additional-fact">I'd also like to Share:</label>
+            <input id="additional-fact" type="text" placeholder="e.g. I am proficient in pyrotechnics" value="I often carry a chessboard with me and I’m always ready to play!">
+            
+            <input id="checkbox" type="checkbox" value="true" required>
+            <label for="checkbox">"I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available."</label>
+
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
-            <!--Checklist-->
         </form>
     </main>
     <div data-include="components/footer.html"></div>

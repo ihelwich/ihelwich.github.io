@@ -74,6 +74,22 @@ table{
     margin: 0 auto;
 }
 
+form{
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+    border: solid;
+    margin: auto;
+}
+
+label, input {
+    display: block;
+}
+
+label {
+    margin-top: 20px;
+}
+
 /* Rule Overrides For Laptops / Small Screens */
 @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
     html {
