@@ -13,21 +13,29 @@
         <h2>BYO Introduction</h2>  
         <h3>Time to build your own Intro page, please fill out the form below so we can create your own page.</h3>
         <form>
-            <label for="first-name" class="name">First Name</label>
-            <input id="first-name"  class="name" type="text" placeholder="e.g. Yoshikage" value="Isaiah" required>
+            <span id="identifiers">
+                <span id="first-name">
+                    <label for="first-name" class="identifier-labels">First Name</label>
+                    <input type="text" class="identifier-inputs" placeholder="e.g. Yoshikage" value="Isaiah" required>
+                </span>
+                <span id="middle-initial">
+                    <label for="middle-initial" class="identifier-labels">Middle Initial</label>
+                    <input type="text" class="identifier-inputs" placeholder="e.g. K" value="M" required>
+                </span>
+                <span id="last-name">
+                    <label for="last-name" class="identifier-labels">Last Name</label>
+                    <input type="text" class="identifier-inputs" placeholder="e.g. Kira" value="Helwich" required>
+                </span>
+                <span id="nickname">
+                    <label for="nickname" class="identifier-labels">Nickname</label>
+                    <input type="text" class="identifier-inputs" placeholder="e.g. Killer Queen" value="">
+                </span>
+                <span id="mascot">
+                    <label for="mascot" class="identifier-labels">Mascot</label>
+                    <input type="text" class="identifier-inputs" placeholder="e.g. Yappy Keyboards" value="Iron Hawk" required>
+                </span>
+            </span> 
 
-            <label for="middle-initial" class="name">Middle Initial</label>
-            <input id="middle-initial" class="name" type="text" placeholder="e.g. K" value="M" required>
-
-            <label for="last-name" class="name">Last Name</label>
-            <input id="last-name" class="name" type="text" placeholder="e.g. Kira" value="Helwich" required>
-            
-            <label for="nickname" class="name">Nickname</label>
-            <input id="nickname" class="name" type="text" placeholder="e.g. Killer Queen" value="">
-            
-            <label for="mascot" class="name">Mascot</label>
-            <input id="mascot" class="name" type="text" placeholder="e.g. Yappy Keyboards" value="Iron Hawk" required>
-            
             <label for="image">Image</label>
             <input id="image" type="file">
             
@@ -43,13 +51,13 @@
             <label for="academic-background">Academic Background</label>
             <input id="academic-background" type="text" placeholder="e.g. ITIS3135 Web-Based Application Design and Development" value="I’m pursuing a Bachelor of Science in Computer Science degree with a concentration in cyber security. I’m considering returning after for a Master’s in cyber security or possibly a different major." required>
             
-            <label for="web-Development-Background">Background in Web Development</label>
-            <input id="web-Development-Background" type="text" placeholder="e.g. 2 years experience with HTML" value="I have experience with HTML and CSS from using freeCodeCamp a while back. I have some (but considerably less) experience with JavaScript from the same organization." required>
+            <label for="web-development-background">Background in Web Development</label>
+            <input id="web-development-background" type="text" placeholder="e.g. 2 years experience with HTML" value="I have experience with HTML and CSS from using freeCodeCamp a while back. I have some (but considerably less) experience with JavaScript from the same organization." required>
             
             <label for="primary-computer-platform">Primary Computer Platform</label>
             <input id="primary-computer-platform" type="text" placeholder="e.g. VAIOS SX-R Windows 10" value="Windows 11 Laptop" required>
             
-            <p>Courses I'm Taking & Why</p>
+            <p id="courses">Courses I'm Taking & Why</p>
             <ul>
                 <li>
                     <input class="course-code" placeholder="e.g. ITIS 3135"><input class="course-name" placeholder="e.g. Web-Based Application Design and Development"><input class="reason-for-taking-course" placeholder="e.g. Required"><button class="delete-course">Delete Course</button>

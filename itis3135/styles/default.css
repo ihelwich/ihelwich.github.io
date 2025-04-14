@@ -41,7 +41,6 @@ body{
     font-family: garamond, serif;
     width: 1000px;
     margin: 0 auto;
-    font-size: 125%;
 }
 
 tr{
@@ -82,19 +81,34 @@ form{
     margin: auto;
 }
 
-input:not(.name){
-    display: block;
-}
-
-label:not(.name){
+label{
+    font-size: 30px;
     margin-top: 20px;
+    display: block; 
+}
+
+input{
+    font-size: 20px;
     display: block;
 }
 
-.name{
-    align-content: center;
+#identifiers{
+    display: flex;
     justify-content: center;
+    margin-left: 0px;
+}
+
+#identifiers > * > *{
+    width: 80%;
     margin: auto;
+}
+
+.identifier-labels{
+    font-size: 25px;
+}
+
+#personal-background, #professional-background, #academic-background, #web-development-background{
+    width: 80%;
 }
 
 /* Rule Overrides For Laptops / Small Screens */
