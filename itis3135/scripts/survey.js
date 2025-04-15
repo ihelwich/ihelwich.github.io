@@ -4,12 +4,11 @@ const addCourseButton = document.getElementById("add-course");
 
 function format(string){
     string = string.replace(/-/g, ' ');
-    string.split(" ").map(word => (word.charAt(0).toUpperCase())).join(" ");
-    return string;
+    return string.split(" ").map(word => (word.charAt(0).toUpperCase())).join(" ");
 }
 
 function displayFormData(){
-    const data = new formData(form);
+    const data = new FormData(form);
     data.forEach((value, key) => {
         const p = document.createElement("p");
         p.textContent = `${format(key)}: ${value}`;
