@@ -166,6 +166,11 @@ input{
     width: 30%;
 }
 
+#reset-after-submit{
+    margin: 20px;
+    width: 30%;
+}
+
 #image-captions{
     display: flex;
 }
