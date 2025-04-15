@@ -44,26 +44,7 @@ function displayFormData(){
             document.querySelector("main").appendChild(figure);
         }
 
-        if (count === 11){
-            const courseHeading = document.createElement("li");
-            courseHeading.innerHTML = `<strong>Courses I'm Taking & Why</strong>`;
-            const nestedCourseList = document.createElement("ul");
-
-            document.querySelectorAll("#course-list li").forEach((courseItem) => {
-                const code = courseItem.querySelector(".course-code")?.textContent.trim();
-                const name = courseItem.querySelector(".course-name")?.value.trim();
-                const reason = courseItem.querySelector(".course-reason")?.value.trim();
-
-                if (code && name && reason) {
-                    const courseLi = document.createElement("li");
-                    courseLi.innerHTML = `<strong>${code} ${name}:</strong> ${reason}`;
-                    nestedCourseList.appendChild(courseLi);
-                }
-            });
-
-            courseHeading.appendChild(nestedCourseList);
-            output.appendChild(courseHeading);
-        }
+        
 
         const li = document.createElement("li");
         li.innerHTML = `<strong>${format(key)}</strong>: ${value}`;
