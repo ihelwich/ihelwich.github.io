@@ -4,7 +4,7 @@ const addCourseButton = document.getElementById("add-course");
 
 function format(string){
     string = string.replace(/-/g, ' ');
-    return string.split(" ").map((word) => word.charAt(0).toUpperCase()).join(" ");
+    return string.split(" ").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 }
 
 function displayFormData(){
@@ -14,8 +14,8 @@ function displayFormData(){
         p.textContent = `${format(key)}: ${value}`;
         output.appendChild(p);
     });
-    form = ``;
-    document.main.appendChild(output);
+    form.innerHTML = ``;
+    document.querySelector("main").appendChild(output);
 }
 
 addCourseButton.addEventListener("click", (event) => {
