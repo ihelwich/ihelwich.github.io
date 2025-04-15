@@ -26,26 +26,6 @@ function displayFormData(){
             return;
         }
 
-        if (count === 6){
-            const imgAlt = data.get("image-alt-caption");
-            const imgCaption = data.get("image-caption");
-
-            const figure = document.createElement("figure");
-
-            const img = document.createElement("img");
-            img.src = "images/professional_headshot_200px.png"; // Static image path as file uploads aren't retained in JS
-            img.alt = imgAlt;
-
-            const caption = document.createElement("figcaption");
-            caption.textContent = `${displayName(data)}'s ${format(imgCaption)}`;
-
-            figure.appendChild(img);
-            figure.appendChild(caption);
-            document.querySelector("main").appendChild(figure);
-        }
-
-        
-
         const li = document.createElement("li");
         li.innerHTML = `<strong>${format(key)}</strong>: ${value}`;
         output.appendChild(li);
