@@ -26,7 +26,7 @@ function displayFormData(){
             return;
         }
 
-        if (count === 8){
+        if (count === 11){
             const courseHeading = document.createElement("li");
             courseHeading.innerHTML = `<strong>Courses I'm Taking & Why</strong>`;
             const nestedCourseList = document.createElement("ul");
