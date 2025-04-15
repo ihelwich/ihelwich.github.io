@@ -21,7 +21,7 @@ function displayFormData(){
     const main = document.querySelector("main");
     const nameHeader = document.querySelector("h3");
     const imageSrc = document.getElementById("image");
-    const imageAlt = document.getElementById("image-alt-caption").value;
+    const imageInput = document.getElementById("image-alt-caption").value;
     const imageCaption = document.getElementById("image-caption").value;
 
     output.innerHTML = "";
@@ -29,12 +29,12 @@ function displayFormData(){
     const figure = document.createElement("figure");
     const caption = document.createElement("figcaption");
     caption.textContent = format(data.get("first-name")) + " " + format(data.get("last-name")) + "'s " + format(imageCaption);
-    if(imageSrc){
+    if (imageInput){
         const img = document.createElement("img");
-        img.src = imageSrc;
+        img.src = URL.createObjectURL(imageInput.files[0]);
         img.alt = imageAlt;
         figure.appendChild(img);
-    }else{
+    } else {
         figure.appendChild(document.createElement("p").innerText = imageAlt);
     }
     figure.appendChild(caption);
