@@ -4,7 +4,7 @@ const addCourseButton = document.getElementById("add-course");
 
 function format(string){
     string = string.replace(/-/g, ' ');
-    return string.split(" ").map(word => (word.charAt(0).toUpperCase())).join(" ");
+    return string.split(" ").map((word) => word.charAt(0).toUpperCase()).join(" ");
 }
 
 function displayFormData(){
