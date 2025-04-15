@@ -124,8 +124,48 @@ input{
 }
 
 .delete-course{
+    background-color: #8a0214;
+    color: #f2f2f2;
     position: relative;
     left: 59%;
+}
+
+#add-course{
+    background-color: #205903;
+    color: #f2f2f2;
+}
+
+#check{
+    display: flex;
+}
+
+#check > label{
+    font-size: 20px;
+}
+
+#checkbox{
+    width: 20px;
+}
+
+#control-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+#control-buttons > *{
+    margin: 20px;
+    width: 30%;
+}
+
+#image-captions{
+    display: flex;
+}
+
+#image-captions > input{
+    position: relative;
+    height: 20px;
+    top: 25px;
+    margin: 0 15px 0 5px;
 }
 
 /* Rule Overrides For Laptops / Small Screens */

@@ -14,33 +14,38 @@
         <h3>Time to build your own Intro page, please fill out the form below so we can create your own page.</h3>
         <form>
             <span id="identifiers">
-                <span id="first-name">
+                <span>
                     <label for="first-name" class="identifier-labels">First Name</label>
-                    <input type="text" class="identifier-inputs" placeholder="e.g. Yoshikage" value="Isaiah" required>
+                    <input id="first-name" type="text" class="identifier-inputs" placeholder="e.g. Yoshikage" value="Isaiah" required>
                 </span>
-                <span id="middle-initial">
+                <span>
                     <label for="middle-initial" class="identifier-labels">Middle Initial</label>
-                    <input type="text" class="identifier-inputs" placeholder="e.g. K" value="M" required>
+                    <input id="middle-initial" type="text" class="identifier-inputs" placeholder="e.g. K" value="M" required>
                 </span>
-                <span id="last-name">
+                <span>
                     <label for="last-name" class="identifier-labels">Last Name</label>
-                    <input type="text" class="identifier-inputs" placeholder="e.g. Kira" value="Helwich" required>
+                    <input id="last-name" type="text" class="identifier-inputs" placeholder="e.g. Kira" value="Helwich" required>
                 </span>
-                <span id="nickname">
+                <span>
                     <label for="nickname" class="identifier-labels">Nickname</label>
-                    <input type="text" class="identifier-inputs" placeholder="e.g. Killer Queen" value="">
+                    <input id="nickname" type="text" class="identifier-inputs" placeholder="e.g. Killer Queen" value="">
                 </span>
-                <span id="mascot">
+                <span>
                     <label for="mascot" class="identifier-labels">Mascot</label>
-                    <input type="text" class="identifier-inputs" placeholder="e.g. Yappy Keyboards" value="Iron Hawk" required>
+                    <input id="mascot" type="text" class="identifier-inputs" placeholder="e.g. Yappy Keyboards" value="Iron Hawk" required>
                 </span>
             </span> 
 
             <label for="image">Image</label>
             <input id="image" type="file">
-            
-            <label for="image-caption">Image Caption</label>
-            <input id="image-caption" type="text" required>
+
+            <span id="image-captions">
+                <label for="image-alt-caption">Image Alt</label>
+                <input id="image-alt-caption" type="text">
+
+                <label for="image-caption">Image Caption</label>
+                <input id="image-caption" type="text" required>
+            </span>
             
             <label for="personal-background">Personal Background</label>
             <input id="personal-background" type="text" placeholder="e.g. I'm 33 years old. My house is in the northeast section of..." value="I’ve lived in Charlotte my whole life. I have yet to travel outside of a few states." required>
@@ -60,19 +65,34 @@
             <p id="courses">Courses I'm Taking & Why</p>
             <ul id="course-list">
                 <li>
-                    <input class="course-code" placeholder="e.g. ITIS 3135"><input class="course-name" placeholder="e.g. Web-Based Application Design and Development"><input class="course-reason" placeholder="e.g. Required"><button class="delete-course">Delete Course</button>
+                    <input class="course-code" placeholder="e.g. ITIS 3135" value="STAT2122">
+                    <input class="course-name" placeholder="e.g. Web-Based Application Design and Development" value="Intro to Probability & Statisitics">
+                    <input class="course-reason" placeholder="e.g. Required" value="Required">
+                    <button class="delete-course">Delete Course</button>
                 </li>
                 <li>
-                    <input class="course-code" placeholder="e.g. ITIS 3135"><input class="course-name" placeholder="e.g. Web-Based Application Design and Development"><input class="course-reason" placeholder="e.g. Required"><button class="delete-course">Delete Course</button>
+                    <input class="course-code" placeholder="e.g. ITIS 3135" value="ITIS3135">
+                    <input class="course-name" placeholder="e.g. Web-Based Application Design and Development" value="Web-Based Application Design and Development">
+                    <input class="course-reason" placeholder="e.g. Required" value="Required">
+                    <button class="delete-course">Delete Course</button>
                 </li>
                 <li>
-                    <input class="course-code" placeholder="e.g. ITIS 3135"><input class="course-name" placeholder="e.g. Web-Based Application Design and Development"><input class="course-reason" placeholder="e.g. Required"><button class="delete-course">Delete Course</button>
+                    <input class="course-code" placeholder="e.g. ITIS 3135" value="ITCS3160">
+                    <input class="course-name" placeholder="e.g. Web-Based Application Design and Development" value="Database Design and Implementation">
+                    <input class="course-reason" placeholder="e.g. Required" value="Required">
+                    <button class="delete-course">Delete Course</button>
                 </li>
                 <li>
-                    <input class="course-code" placeholder="e.g. ITIS 3135"><input class="course-name" placeholder="e.g. Web-Based Application Design and Development"><input class="course-reason" placeholder="e.g. Required"><button class="delete-course">Delete Course</button>
+                    <input class="course-code" placeholder="e.g. ITIS 3135" value="ITIS3200">
+                    <input class="course-name" placeholder="e.g. Web-Based Application Design and Development" value="Intro to Info Security & Privacy">
+                    <input class="course-reason" placeholder="e.g. Required" value="Required">
+                    <button class="delete-course">Delete Course</button>
                 </li>
                 <li>
-                    <input class="course-code" placeholder="e.g. ITIS 3135"><input class="course-name" placeholder="e.g. Web-Based Application Design and Development"><input class="course-reason" placeholder="e.g. Required"><button class="delete-course">Delete Course</button>
+                    <input class="course-code" placeholder="e.g. ITIS 3135" value="ITSC3688">
+                    <input class="course-name" placeholder="e.g. Web-Based Application Design and Development" value="Computers and Their Impact on Society">
+                    <input class="course-reason" placeholder="e.g. Required" value="Required">
+                    <button class="delete-course">Delete Course</button>
                 </li>
             </ul>
             <button id="add-course">Add Course</button>
@@ -82,12 +102,16 @@
             
             <label for="additional-fact">I'd also like to Share:</label>
             <input id="additional-fact" type="text" placeholder="e.g. I am proficient in pyrotechnics" value="I often carry a chessboard with me and I’m always ready to play!">
-            
-            <input id="checkbox" type="checkbox" value="true" required>
-            <label for="checkbox">"I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available."</label>
 
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
+            <span id="check">
+                <input id="checkbox" type="checkbox" value="true" required>
+                <label for="checkbox">"I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available."</label>
+            </span> 
+
+            <span id="control-buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </span>
         </form>
     </main>
     <div data-include="components/footer.html"></div>
