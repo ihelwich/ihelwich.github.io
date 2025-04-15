@@ -50,7 +50,7 @@ function displayFormData(){
             const nestedCourseList = document.createElement("ul");
 
             document.querySelectorAll("#course-list li").forEach((courseItem) => {
-                const code = courseItem.querySelector(".course-code")?.value.trim();
+                const code = courseItem.querySelector(".course-code")?.textContent.trim();
                 const name = courseItem.querySelector(".course-name")?.value.trim();
                 const reason = courseItem.querySelector(".course-reason")?.value.trim();
 
