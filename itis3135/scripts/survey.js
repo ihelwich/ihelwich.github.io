@@ -20,19 +20,23 @@ function displayFormData(){
     const data = new FormData(form);
     const main = document.querySelector("main");
     const nameHeader = document.querySelector("h3");
-    // const imageSrc = "images/professional_headshot_200px.png";
+    const imageSrc = document.getElementById("image");
     const imageAlt = document.getElementById("image-alt-caption").value;
     const imageCaption = document.getElementById("image-caption").value;
 
     output.innerHTML = "";
 
     const figure = document.createElement("figure");
-    const img = document.createElement("img");
-    img.src = imageSrc;
-    img.alt = imageAlt;
     const caption = document.createElement("figcaption");
     caption.textContent = format(data.get("first-name")) + " " + format(data.get("last-name")) + "'s " + format(imageCaption);
-    figure.appendChild(img);
+    if(imageSrc){
+        const img = document.createElement("img");
+        img.src = imageSrc;
+        img.alt = imageAlt;
+        figure.appendChild(img);
+    }else{
+        figure.appendChild(document.createElement("p").innerText = imageAlt);
+    }
     figure.appendChild(caption);
     main.appendChild(figure);
 
