@@ -17,6 +17,10 @@ ol{
     list-style-position: inside;
 }
 
+.no-bullet {
+    list-style-type: none;
+}
+
 a{
     color: #49111c;
     padding: 3px;
