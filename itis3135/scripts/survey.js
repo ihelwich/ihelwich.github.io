@@ -25,30 +25,32 @@ function displayFormData(){
         if (count <= 5){
             return;
         }else if(count === 11){
+            const li = document.createElement("li");
 
+            const courseHeader = document.createElement("li");
+            courseHeader.textContent = "Courses I'm Taking & Why:";
+            output.appendChild(courseHeader);
+            output.appendChild(document.createElement("li"));
+
+            const courseListItems = document.querySelectorAll("#course-list li");
+            courseListItems.forEach((li, index) => {
+                const code = li.querySelector(".course-code").value;
+                const name = li.querySelector(".course-name").value;
+                const reason = li.querySelector(".course-reason").value;
+
+                const courseList = document.createElement("ul");
+                const courseItem = document.createElement("li");
+                courseItem.textContent = `<strong>${code} - ${name}:</strong> ${reason}`;
+
+                courseList.appendChild(courseItem);
+                li.appendChild(courseList);
+            })
+        }else{
+            const li = document.createElement("li");
+            li.innerHTML = `<strong>${format(key)}</strong>: ${value}`;
+            output.appendChild(li);
         }
-        const li = document.createElement("li");
-        li.innerHTML = `<strong>${format(key)}</strong>: ${value}`;
-        output.appendChild(li);
-    });
-
-    const courseHeader = document.createElement("li");
-    courseHeader.textContent = "Courses I'm Taking & Why:";
-    output.appendChild(courseHeader);
-    output.appendChild(document.createElement("li"));
-
-    const courseListItems = document.querySelectorAll("#course-list li");
-    courseListItems.forEach((li, index) => {
-    const code = li.querySelector(".course-code").value;
-    const name = li.querySelector(".course-name").value;
-    const reason = li.querySelector(".course-reason").value;
-
-    const courseList = document.createElement("ul");
-    const courseItem = document.createElement("li");
-    courseItem.textContent = `<strong>${code} - ${name}:</strong> ${reason}`;
-    courseList.appendChild(courseItem);
-    output.appendChild(courseList);
-  });
+    x});
     
     form.hidden = "true";
     document.querySelector("h3").textContent = displayName(data);
