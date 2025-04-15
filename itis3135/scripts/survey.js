@@ -36,12 +36,12 @@ function displayFormData(){
 
     const courseListItems = document.querySelectorAll("#course-list li");
     courseListItems.forEach((li, index) => {
-    const code = li.querySelector(".course-code")?.value || "";
-    const name = li.querySelector(".course-name")?.value || "";
-    const reason = li.querySelector(".course-reason")?.value || "";
+    const code = li.querySelector(".course-code").value;
+    const name = li.querySelector(".course-name").value;
+    const reason = li.querySelector(".course-reason").value;
 
     const courseItem = document.createElement("p");
-    courseItem.textContent = `Course ${index + 1}: ${code} - ${name} (${reason})`;
+    courseItem.textContent = `<strong>   ${code} - ${name}:</strong> ${reason}`;
     output.appendChild(courseItem);
   });
     
@@ -59,14 +59,17 @@ addCourseButton.addEventListener("click", (event) => {
     const courseCode = document.createElement("input");
     courseCode.className = "course-code";
     courseCode.placeholder = "e.g. ITIS 3135";
+    courseCode.required = "true";
 
     const courseName = document.createElement("input");
     courseName.className = "course-name";
     courseName.placeholder = "e.g. Web-Based Application Design and Development";
+    courseName.required = "true";
 
     const courseReason = document.createElement("input");
     courseReason.className = "course-reason";
     courseReason.placeholder = "e.g. Required";
+    courseReason.required = "true";
 
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "delete-course";
