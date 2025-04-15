@@ -2,7 +2,22 @@ const form = document.querySelector("form");
 const output = document.createElement("span");
 const addCourseButton = document.getElementById("add-course");
 
-form.addEventListener("submit", (event)=>{
+function displayFormData(){
+    const formData = new formData(form);
+    formData.forEach((value, key)=>{
+        const p = document.createElement("p");
+        p.textContent = `${format(key)}: ${value}`;
+        output.appendChild(p);
+    });
+}
+
+function format(string){
+    string = string.replace(/-/g, ' ');
+    string.split(" ").map(word => word.charAt(0).toUpperCase()).join(" ");
+    return string;
+}
+
+form.addEventListener("submit", (event) => {
     if (!form.checkValidity()) {
         alert("Please fill in all required fields.");
         event.preventDefault();
@@ -12,7 +27,7 @@ form.addEventListener("submit", (event)=>{
     displayFormData();
 });
 
-addCourseButton.addEventListener("click", (event)=>{
+addCourseButton.addEventListener("click", (event) => {
     event.preventDefault();
 
     const li = document.createElement("li");
@@ -43,18 +58,3 @@ addCourseButton.addEventListener("click", (event)=>{
     li.appendChild(deleteBtn);
     courseList.appendChild(li);
 })
-
-function displayFormData(){
-    const formData = new formData(form);
-    formData.forEach((value, key)=>{
-        const p = document.createElement("p");
-        p.textContent = `${format(key)}: ${value}`;
-        output.appendChild(p);
-    });
-}
-
-function format(string){
-    string = string.replace(/-/g, ' ');
-    string.split(" ").map(word => word.charAt(0).toUpperCase()).join(" ");
-    return string;
-}
