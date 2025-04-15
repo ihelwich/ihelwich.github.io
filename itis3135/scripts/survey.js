@@ -68,7 +68,7 @@ form.addEventListener("reset", (event) => {
 
     const inputs = form.querySelectorAll("input");
     inputs.forEach((input) => {
-        if (input.type !== "submit" || "reset"){
+        if (input.type !== "submit" && input.type !== "reset"){
                 input.value = "";
             }
     });
