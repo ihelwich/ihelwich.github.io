@@ -17,16 +17,6 @@ function format(string){
     return string;
 }
 
-form.addEventListener("submit", (event) => {
-    if (!form.checkValidity()) {
-        alert("Please fill in all required fields.");
-        event.preventDefault();
-        return;
-    }
-    event.preventDefault();
-    displayFormData();
-});
-
 addCourseButton.addEventListener("click", (event) => {
     event.preventDefault();
 
@@ -58,3 +48,17 @@ addCourseButton.addEventListener("click", (event) => {
     li.appendChild(deleteBtn);
     courseList.appendChild(li);
 })
+
+form.addEventListener("submit", (event) => {
+    if (!form.checkValidity()) {
+        alert("Please fill in all required fields.");
+        event.preventDefault();
+        return;
+    }
+    event.preventDefault();
+    displayFormData();
+});
+
+form.addEventListener("reset", (event) => {
+    location.reload();
+});
