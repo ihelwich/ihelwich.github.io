@@ -60,13 +60,12 @@ form.addEventListener("submit", (event) => {
 });
 
 form.addEventListener("reset", (event) => {
+    const checkbox = document.getElementById("checkbox");
+    checkbox.checked = false;
+
     const inputs = form.querySelectorAll("input");
-    inputs.forEach(input => {
-        if (input.type === "checkbox" || input.type === "radio") {
-        input.checked = false;
-        } else if (input.type !== "submit" && input.type !== "reset" && input.type !== "button") {
+    inputs.forEach((input) => {
         input.value = "";
-        }
     });
 
     const courseList = document.getElementById("course-list");
