@@ -26,26 +26,24 @@ function displayFormData(){
             return;
         }
 
-        const courseItems = document.querySelectorAll("#course-list li");
-        if (courseItems.length > 0) {
-            const courseHeader = document.createElement("h4");
-            courseHeader.textContent = "Courses I'm Taking & Why:";
-            output.appendChild(courseHeader);
+        const courseHeading = document.createElement("li");
+        courseHeading.innerHTML = `<strong>Courses I'm Taking & Why</strong>`;
+        const nestedCourseList = document.createElement("ul");
 
-            const courseUl = document.createElement("ul");
+        document.querySelectorAll("#course-list li").forEach((courseItem) => {
+            const code = courseItem.querySelector(".course-code")?.value.trim();
+            const name = courseItem.querySelector(".course-name")?.value.trim();
+            const reason = courseItem.querySelector(".course-reason")?.value.trim();
 
-            courseItems.forEach((item) => {
-                const code = item.querySelector(".course-code").value;
-                const name = item.querySelector(".course-name").value;
-                const reason = item.querySelector(".course-reason").value;
-
+            if (code && name && reason) {
                 const courseLi = document.createElement("li");
-                courseLi.textContent = `${code} - ${name} (${reason})`;
-                courseUl.appendChild(courseLi);
-            });
+                courseLi.innerHTML = `<strong>${code} ${name}:</strong> ${reason}`;
+                nestedCourseList.appendChild(courseLi);
+            }
+        });
 
-            output.appendChild(courseUl);
-        }
+        courseHeading.appendChild(nestedCourseList);
+        output.appendChild(courseHeading);
 
         const li = document.createElement("li");
         li.innerHTML = `<strong>${format(key)}</strong>: ${value}`;
