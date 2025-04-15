@@ -27,7 +27,7 @@ function displayFormData(){
         }
 
         const li = document.createElement("li");
-        li.textContent = `<strong>${format(key)}</strong>: ${value}`;
+        li.innerHTML = `<strong>${format(key)}</strong>: ${value}`;
         output.appendChild(li);
     });
     
