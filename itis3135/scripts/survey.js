@@ -20,8 +20,8 @@ function displayFormData(){
     const data = new FormData(form);
     const main = document.querySelector("main");
     const nameHeader = document.querySelector("h3");
-    const imageSrc = document.getElementById("image");
-    const imageInput = document.getElementById("image-alt-caption").value;
+    const imageInput = document.getElementById("image");
+    const imageAlt = document.getElementById("image-alt-caption").value;
     const imageCaption = document.getElementById("image-caption").value;
 
     output.innerHTML = "";
@@ -35,7 +35,7 @@ function displayFormData(){
         img.alt = imageAlt;
         figure.appendChild(img);
     } else {
-        const alt = document.createElement("p")
+        const alt = document.createElement("p");
         alt.innerText = imageAlt;
         figure.appendChild(alt);
     }
