@@ -60,8 +60,9 @@ form.addEventListener("submit", (event) => {
 });
 
 form.addEventListener("reset", (event) => {
-    const checkbox = document.getElementById("checkbox");
-    checkbox.checked = false;
+    event.preventDefault();
+
+    document.getElementById("checkbox").checked = false;
 
     const inputs = form.querySelectorAll("input");
     inputs.forEach((input) => {
