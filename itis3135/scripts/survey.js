@@ -1,5 +1,5 @@
 const form = document.querySelector("form");
-const output = document.createElement("span");
+const output = document.createElement("ul");
 const addCourseButton = document.getElementById("add-course");
 
 function format(string){
@@ -26,9 +26,9 @@ function displayFormData(){
             return;
         }
 
-        const p = document.createElement("p");
-        p.textContent = `${format(key)}: ${value}`;
-        output.appendChild(p);
+        const li = document.createElement("li");
+        li.textContent = `<strong>${format(key)}</strong>: ${value}`;
+        output.appendChild(li);
     });
     
     form.hidden = "true";
