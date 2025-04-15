@@ -60,5 +60,15 @@ form.addEventListener("submit", (event) => {
 });
 
 form.addEventListener("reset", (event) => {
-    location.reload();
+    const inputs = form.querySelectorAll("input");
+    inputs.forEach(input => {
+        if (input.type === "checkbox" || input.type === "radio") {
+        input.checked = false;
+        } else if (input.type !== "submit" && input.type !== "reset" && input.type !== "button") {
+        input.value = "";
+        }
+    });
+
+    const courseList = document.getElementById("course-list");
+    courseList.innerHTML = "";
 });
