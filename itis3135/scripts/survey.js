@@ -54,7 +54,6 @@ function displayFormData(){
     courseList.innerHTML = `<strong>Courses I'm Taking &amp; Why</strong>`;
 
     const nestedList = document.createElement("ul");
-    nestedList.classList.add("no-bullet");
     document.querySelectorAll("#course-list li").forEach((li) => {
         const code = li.querySelector(".course-code").value;
         const name = li.querySelector(".course-name").value;
