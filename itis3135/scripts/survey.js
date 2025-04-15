@@ -17,6 +17,11 @@ function format(string){
     return string;
 }
 
+function deleteCourse(){
+    e.preventDefault();
+    this.closest("li").remove();
+}
+
 addCourseButton.addEventListener("click", (event) => {
     event.preventDefault();
 
