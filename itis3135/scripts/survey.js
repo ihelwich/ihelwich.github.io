@@ -3,8 +3,8 @@ const output = document.createElement("span");
 const addCourseButton = document.getElementById("add-course");
 
 function displayFormData(){
-    const formData = new formData(form);
-    formData.forEach((value, key)=>{
+    const data = new formData(form);
+    data.forEach((value, key) => {
         const p = document.createElement("p");
         p.textContent = `${format(key)}: ${value}`;
         output.appendChild(p);
