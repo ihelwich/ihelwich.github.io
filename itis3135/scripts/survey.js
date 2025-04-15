@@ -68,7 +68,9 @@ form.addEventListener("reset", (event) => {
 
     const inputs = form.querySelectorAll("input");
     inputs.forEach((input) => {
-        input.value = "";
+        if(input.type !== "submit" || "reset"){
+                input.value = "";
+            }
     });
 
     const courseList = document.getElementById("course-list");
