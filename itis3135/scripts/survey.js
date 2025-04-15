@@ -29,13 +29,15 @@ function displayFormData(){
     const figure = document.createElement("figure");
     const caption = document.createElement("figcaption");
     caption.textContent = format(data.get("first-name")) + " " + format(data.get("last-name")) + "'s " + format(imageCaption);
-    if (imageInput){
+    if (imageInput && imageInput.files.length > 0){
         const img = document.createElement("img");
         img.src = URL.createObjectURL(imageInput.files[0]);
         img.alt = imageAlt;
         figure.appendChild(img);
     } else {
-        figure.appendChild(document.createElement("p").innerText = imageAlt);
+        const alt = document.createElement("p")
+        alt.innerText = imageAlt;
+        figure.appendChild(alt);
     }
     figure.appendChild(caption);
     main.appendChild(figure);
