@@ -14,7 +14,7 @@ function displayFormData(){
         p.textContent = `${format(key)}: ${value}`;
         output.appendChild(p);
     });
-    form.innerHTML = ``;
+    form.hidden = "true";
     document.querySelector("main").appendChild(output);
 }
 
