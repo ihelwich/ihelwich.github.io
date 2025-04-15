@@ -21,36 +21,15 @@ function displayFormData(){
 
     let count = 0;
     data.forEach((value, key) => {
-        count++;
         if (count <= 5){
+            count++;
             return;
-        }else if(count === 11){
-            const li = document.createElement("li");
-
-            const courseHeader = document.createElement("li");
-            courseHeader.textContent = "Courses I'm Taking & Why:";
-            output.appendChild(courseHeader);
-            output.appendChild(document.createElement("li"));
-
-            const courseListItems = document.querySelectorAll("#course-list li");
-            courseListItems.forEach((li, index) => {
-                const code = li.querySelector(".course-code").value;
-                const name = li.querySelector(".course-name").value;
-                const reason = li.querySelector(".course-reason").value;
-
-                const courseList = document.createElement("ul");
-                const courseItem = document.createElement("li");
-                courseItem.textContent = `<strong>${code} - ${name}:</strong> ${reason}`;
-
-                courseList.appendChild(courseItem);
-                li.appendChild(courseList);
-            })
-        }else{
-            const li = document.createElement("li");
-            li.innerHTML = `<strong>${format(key)}</strong>: ${value}`;
-            output.appendChild(li);
         }
-    x});
+
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${format(key)}</strong>: ${value}`;
+        output.appendChild(li);
+    });
     
     form.hidden = "true";
     document.querySelector("h3").textContent = displayName(data);
@@ -66,17 +45,14 @@ addCourseButton.addEventListener("click", (event) => {
     const courseCode = document.createElement("input");
     courseCode.className = "course-code";
     courseCode.placeholder = "e.g. ITIS 3135";
-    courseCode.required = "true";
 
     const courseName = document.createElement("input");
     courseName.className = "course-name";
     courseName.placeholder = "e.g. Web-Based Application Design and Development";
-    courseName.required = "true";
 
     const courseReason = document.createElement("input");
     courseReason.className = "course-reason";
     courseReason.placeholder = "e.g. Required";
-    courseReason.required = "true";
 
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "delete-course";
