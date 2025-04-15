@@ -20,7 +20,7 @@ function displayFormData(){
     const data = new FormData(form);
     const main = document.querySelector("main");
     const nameHeader = document.querySelector("h3");
-    const imageSrc = "images/professional_headshot_200px.png"; // assumed path
+    // const imageSrc = "images/professional_headshot_200px.png";
     const imageAlt = document.getElementById("image-alt-caption").value;
     const imageCaption = document.getElementById("image-caption").value;
 
