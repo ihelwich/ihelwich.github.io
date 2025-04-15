@@ -26,6 +26,27 @@ function displayFormData(){
             return;
         }
 
+        const courseItems = document.querySelectorAll("#course-list li");
+        if (courseItems.length > 0) {
+            const courseHeader = document.createElement("h4");
+            courseHeader.textContent = "Courses I'm Taking & Why:";
+            output.appendChild(courseHeader);
+
+            const courseUl = document.createElement("ul");
+
+            courseItems.forEach((item) => {
+                const code = item.querySelector(".course-code").value;
+                const name = item.querySelector(".course-name").value;
+                const reason = item.querySelector(".course-reason").value;
+
+                const courseLi = document.createElement("li");
+                courseLi.textContent = `${code} - ${name} (${reason})`;
+                courseUl.appendChild(courseLi);
+            });
+
+            output.appendChild(courseUl);
+        }
+
         const li = document.createElement("li");
         li.innerHTML = `<strong>${format(key)}</strong>: ${value}`;
         output.appendChild(li);
