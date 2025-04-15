@@ -14,6 +14,8 @@ function displayFormData(){
         p.textContent = `${format(key)}: ${value}`;
         output.appendChild(p);
     });
+    form = ``;
+    document.main.appendChild(output);
 }
 
 addCourseButton.addEventListener("click", (event) => {
