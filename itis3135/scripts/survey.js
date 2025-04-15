@@ -21,29 +21,31 @@ function displayFormData(){
 
     let count = 0;
     data.forEach((value, key) => {
+        count++;
         if (count <= 5){
-            count++;
             return;
         }
 
-        const courseHeading = document.createElement("li");
-        courseHeading.innerHTML = `<strong>Courses I'm Taking & Why</strong>`;
-        const nestedCourseList = document.createElement("ul");
+        if (count === 14){
+            const courseHeading = document.createElement("li");
+            courseHeading.innerHTML = `<strong>Courses I'm Taking & Why</strong>`;
+            const nestedCourseList = document.createElement("ul");
 
-        document.querySelectorAll("#course-list li").forEach((courseItem) => {
-            const code = courseItem.querySelector(".course-code")?.value.trim();
-            const name = courseItem.querySelector(".course-name")?.value.trim();
-            const reason = courseItem.querySelector(".course-reason")?.value.trim();
+            document.querySelectorAll("#course-list li").forEach((courseItem) => {
+                const code = courseItem.querySelector(".course-code")?.value.trim();
+                const name = courseItem.querySelector(".course-name")?.value.trim();
+                const reason = courseItem.querySelector(".course-reason")?.value.trim();
 
-            if (code && name && reason) {
-                const courseLi = document.createElement("li");
-                courseLi.innerHTML = `<strong>${code} ${name}:</strong> ${reason}`;
-                nestedCourseList.appendChild(courseLi);
-            }
-        });
+                if (code && name && reason) {
+                    const courseLi = document.createElement("li");
+                    courseLi.innerHTML = `<strong>${code} ${name}:</strong> ${reason}`;
+                    nestedCourseList.appendChild(courseLi);
+                }
+            });
 
-        courseHeading.appendChild(nestedCourseList);
-        output.appendChild(courseHeading);
+            courseHeading.appendChild(nestedCourseList);
+            output.appendChild(courseHeading);
+        }
 
         const li = document.createElement("li");
         li.innerHTML = `<strong>${format(key)}</strong>: ${value}`;
