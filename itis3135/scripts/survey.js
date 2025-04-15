@@ -19,6 +19,7 @@ function displayFormData(){
 addCourseButton.addEventListener("click", (event) => {
     event.preventDefault();
 
+    const courseList = document.getElementById("course-list");
     const li = document.createElement("li");
 
     const courseCode = document.createElement("input");
