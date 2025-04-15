@@ -88,7 +88,6 @@ function displayFormData(){
     const resetBtn = document.createElement("button");
     resetBtn.textContent = "Reset";
     resetBtn.type = "button";
-    resetBtn.id = "reset-after-submit";
 
     resetBtn.addEventListener("click", () => {
         form.reset();
