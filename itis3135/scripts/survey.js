@@ -30,10 +30,20 @@ function displayFormData(){
     const caption = document.createElement("figcaption");
     caption.textContent = format(data.get("first-name")) + " " + format(data.get("last-name")) + "'s " + format(imageCaption);
     if (imageInput && imageInput.files.length > 0){
-        const img = document.createElement("img");
-        img.src = URL.createObjectURL(imageInput.files[0]);
-        img.alt = imageAlt;
-        figure.appendChild(img);
+        const file = imageInput.files[0];
+        const validTypes = ["image/png", "image/jpeg"];
+
+        if (validTypes.includes(file.type)) {
+            const img = document.createElement("img");
+            img.src = URL.createObjectURL(file);
+            img.alt = imageAlt;
+            figure.appendChild(img);
+        } else {
+            const error = document.createElement("p");
+            error.style.color = "red";
+            error.textContent = "Invalid file type. Please upload a PNG or JPEG image.";
+            figure.appendChild(error);
+    }
     } else {
         const alt = document.createElement("p");
         alt.innerText = imageAlt;
