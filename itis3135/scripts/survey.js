@@ -18,22 +18,67 @@ function displayName(data){
 
 function displayFormData(){
     const data = new FormData(form);
+    const main = document.querySelector("main");
+    const nameHeader = document.querySelector("h3");
+    const imageSrc = "images/professional_headshot_200px.png"; // assumed path
+    const imageAlt = document.getElementById("image-alt-caption").value;
+    const imageCaption = document.getElementById("image-caption").value;
 
-    let count = 0;
-    data.forEach((value, key) => {
-        count++;
-        if (count <= 5){
-            return;
-        }
+    output.innerHTML = "";
 
+    const figure = document.createElement("figure");
+    const img = document.createElement("img");
+    img.src = imageSrc;
+    img.alt = imageAlt;
+    const caption = document.createElement("figcaption");
+    caption.textContent = format(data.get("first-name")) + " " + format(data.get("last-name")) + "'s " + format(imageCaption);
+    figure.appendChild(img);
+    figure.appendChild(caption);
+    main.appendChild(figure);
+
+    const fields = [
+        ["personal-background", "Personal Background"],
+        ["professional-background", "Professional Background"],
+        ["academic-background", "Academic Background"],
+        ["web-development-background", "Background in this Subject"],
+        ["primary-computer-platform", "Primary Computer Platform"]
+    ];
+
+    fields.forEach(([key, label]) => {
         const li = document.createElement("li");
-        li.innerHTML = `<strong>${format(key)}</strong>: ${value}`;
+        li.innerHTML = `<strong>${label}:</strong> ${data.get(key)}`;
         output.appendChild(li);
     });
-    
+
+    const courseList = document.createElement("li");
+    courseList.innerHTML = `<strong>Courses I'm Taking &amp; Why</strong>`;
+
+    const nestedList = document.createElement("ul");
+    nestedList.classList.add("no-bullet");
+    document.querySelectorAll("#course-list li").forEach((li) => {
+        const code = li.querySelector(".course-code").value;
+        const name = li.querySelector(".course-name").value;
+        const reason = li.querySelector(".course-reason").value;
+
+        const nestedLi = document.createElement("li");
+        nestedLi.innerHTML = `<strong>${code} ${name}:</strong> ${reason}`;
+        nestedList.appendChild(nestedLi);
+    });
+
+    courseList.appendChild(nestedList);
+    output.appendChild(courseList);
+
+    const fact1 = document.createElement("li");
+    fact1.innerHTML = `<strong>Interesting Item to Remember me by:</strong> ${data.get("interesting-item-to-remember-me-by")}`;
+    output.appendChild(fact1);
+
+    const fact2 = document.createElement("li");
+    fact2.innerHTML = `<strong>I'd also like to Share:</strong> ${data.get("i'd-also-like-to-share")}`;
+    output.appendChild(fact2);
+
+    nameHeader.textContent = displayName(data);
     form.hidden = "true";
-    document.querySelector("h3").textContent = displayName(data);
-    document.querySelector("main").appendChild(output);
+    main.appendChild(output);
 }
 
 addCourseButton.addEventListener("click", (event) => {
