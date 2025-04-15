@@ -7,14 +7,32 @@ function format(string){
     return string.split(" ").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 }
 
+function displayName(data){
+    const first = data.get("first-name");
+    const middle = data.get("middle-initial");
+    const last = data.get("last-name");
+    const mascot = data.get("mascot");
+
+    return middle ? `${first} ${middle}. ${last}'s ${mascot}` : `${first} ${last}'s ${mascot}`;
+}
+
 function displayFormData(){
     const data = new FormData(form);
+
+    let count = 0;
     data.forEach((value, key) => {
+        if (count <= 5){
+            count++;
+            return;
+        }
+
         const p = document.createElement("p");
         p.textContent = `${format(key)}: ${value}`;
         output.appendChild(p);
     });
+    
     form.hidden = "true";
+    document.querySelector("h3").textContent = displayName(data);
     document.querySelector("main").appendChild(output);
 }
 
