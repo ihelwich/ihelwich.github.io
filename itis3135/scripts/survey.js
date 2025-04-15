@@ -2,6 +2,12 @@ const form = document.querySelector("form");
 const output = document.createElement("span");
 const addCourseButton = document.getElementById("add-course");
 
+function format(string){
+    string = string.replace(/-/g, ' ');
+    string.split(" ").map(word => (word.charAt(0).toUpperCase())).join(" ");
+    return string;
+}
+
 function displayFormData(){
     const data = new formData(form);
     data.forEach((value, key) => {
@@ -9,12 +15,6 @@ function displayFormData(){
         p.textContent = `${format(key)}: ${value}`;
         output.appendChild(p);
     });
-}
-
-function format(string){
-    string = string.replace(/-/g, ' ');
-    string.split(" ").map(word => word.charAt(0).toUpperCase()).join(" ");
-    return string;
 }
 
 addCourseButton.addEventListener("click", (event) => {
@@ -47,7 +47,7 @@ addCourseButton.addEventListener("click", (event) => {
     li.appendChild(courseReason);
     li.appendChild(deleteBtn);
     courseList.appendChild(li);
-})
+});
 
 form.addEventListener("submit", (event) => {
     if (!form.checkValidity()) {
