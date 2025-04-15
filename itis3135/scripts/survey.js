@@ -25,11 +25,25 @@ function displayFormData(){
             count++;
             return;
         }
-
         const li = document.createElement("li");
         li.innerHTML = `<strong>${format(key)}</strong>: ${value}`;
         output.appendChild(li);
     });
+
+    const courseHeader = document.createElement("h3");
+    courseHeader.textContent = "Courses I'm Taking & Why:";
+    output.appendChild(courseHeader);
+
+    const courseListItems = document.querySelectorAll("#course-list li");
+    courseListItems.forEach((li, index) => {
+    const code = li.querySelector(".course-code")?.value || "";
+    const name = li.querySelector(".course-name")?.value || "";
+    const reason = li.querySelector(".course-reason")?.value || "";
+
+    const courseItem = document.createElement("p");
+    courseItem.textContent = `Course ${index + 1}: ${code} - ${name} (${reason})`;
+    output.appendChild(courseItem);
+  });
     
     form.hidden = "true";
     document.querySelector("h3").textContent = displayName(data);
