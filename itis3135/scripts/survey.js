@@ -84,6 +84,21 @@ function displayFormData(){
     nameHeader.textContent = displayName(data);
     form.hidden = "true";
     main.appendChild(output);
+
+    const resetBtn = document.createElement("button");
+    resetBtn.textContent = "Enter New Values";
+    resetBtn.type = "button";
+    resetBtn.style.marginTop = "1em";
+
+    resetBtn.addEventListener("click", () => {
+        form.reset(); // reset all form fields
+        output.innerHTML = ""; // clear the displayed output
+        form.hidden = false; // show the form again
+        resetBtn.remove(); // remove this button after reset
+        document.querySelector("h3").textContent = "Time to build your own Intro page, please fill out the form below so we can create your own page.";
+    });
+
+    main.appendChild(resetBtn);
 }
 
 addCourseButton.addEventListener("click", (event) => {
