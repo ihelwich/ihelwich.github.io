@@ -1,0 +1,38 @@
+/*
+Color Scheme:
+Chrysler Blue: #4f00e1
+*/
+
+nav, header{
+    text-align: center;
+}
+
+a{
+    color: #4f00e1;
+    padding: 3px;
+}
+
+main {
+    max-width: 1200px; /* Adjust as needed */
+    width: 90%; /* Adjust percentage based on design requirements */
+    margin: 0 auto; /* Centers the content horizontally */
+}
+
+/* Rule Overrides For Laptops / Small Screens */
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    html {
+        font-size: 100%;
+    }
+}
+/* Rule Overrides For Tablet Devices */
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    #colorbox {
+        font-size: 80%;
+    }
+}
+/* Rule Overrides For Mobile Devices */
+@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+    #colorbox {
+        font-size: 90%;
+    }
+}
