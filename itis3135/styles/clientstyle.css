@@ -157,6 +157,134 @@ main {
     border-radius: 10px;
 }
 
+.gallery-section {
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+}
+
+.gallery-grid figcaption {
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.commission-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #4f00e1; /* Chrysler Blue */
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.commission-button:hover {
+    background-color: #333333; /* Jet on hover */
+}
+
+.form-section {
+    text-align: center;
+}
+
+.form-section p {
+    max-width: 500px;
+    margin: 20px auto;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.commission-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.commission-form label {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #444444;
+}
+
+.commission-form input,
+.commission-form select,
+.commission-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #555555;
+    background-color: #444444;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.commission-form textarea {
+    resize: vertical;
+}
+
+.commission-form button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #4f00e1; /* Chrysler Blue */
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.commission-form button:hover {
+    background-color: #333333; /* Jet on hover */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.contact-form label {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #444444;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #555555;
+    background-color: #444444;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+
 .footer {
     background-color: #333333;
     color: #ffffff;
