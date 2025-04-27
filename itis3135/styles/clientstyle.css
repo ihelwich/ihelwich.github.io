@@ -31,6 +31,13 @@ h2:not(.welcome-section h2) {
     font-size: 30px;
 }
 
+.about-section p {
+    max-width: 500px;
+    margin: 20px auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
 .social-media {
     position: absolute;
     top: 15px;
@@ -111,6 +118,18 @@ a {
     border-radius: 20px;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 main {
     position: relative;
     text-align: center;
@@ -119,6 +138,7 @@ main {
     max-width: 800px;
     padding: 40px 20px;
     color: #333333;
+    flex: 1;
 }
 
 .welcome-section {
