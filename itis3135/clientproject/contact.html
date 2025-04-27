@@ -7,31 +7,11 @@
     <link rel="stylesheet" href="../styles/clientstyle.css">
 </head>
 <body>
-
-    <header class="header">
-        <div class="social-media">
-            <a href="#"><img src="../images/icon-instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="../images/icon-x.png" alt="X"></a>
-            <a href="#"><img src="../images/icon-facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="../images/icon-tiktok.png" alt="TikTok"></a>
-        </div>
-        <h1>Art Showcase</h1>
-        <a id="login-button" href="#">Login</a>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="commission.html">Commissions</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <div data-include="../components/artshowcaseheader.html"></div>
     <main>
-        <section class="form-section">
+        <section id="form-section">
             <h2>Contact Us</h2>
-            <form action="#" method="post" class="contact-form">
+            <form action="#" method="post" id="contact-form">
                 <label for="contact-name">Name:</label>
                 <input type="text" id="contact-name" name="contact-name" required>
 
@@ -41,15 +21,12 @@
                 <label for="contact-message">Message:</label>
                 <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
 
-                <button type="submit" class="commission-button">Send Message</button>
+                <button type="submit" id="commission-button">Send Message</button>
             </form>
         </section>
     </main>
-
-    <footer class="footer">
-        <p>&copy; 2025 Art Showcase by Candise Huskey. All rights reserved.</p>
-        <p>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>.</p>
-    </footer>
-
+    <div data-include="../components/artshowcasefooter.html"></div>
+    <script src="../scripts/include.min.js"></script>
+    <script src="../scripts/artshowcase.js"></script>
 </body>
 </html>

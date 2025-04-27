@@ -7,38 +7,16 @@
     <link rel="stylesheet" href="../styles/clientstyle.css">
 </head>
 <body>
-    <header class="header">
-        <div class="social-media">
-            <!--Icons pulled from flaticon.com/attributes found below-->
-            <a href="#"><img src="../images/icon-instagram.png"></a>
-            <a href="#"><img src="../images/icon-x.png"></a>
-            <a href=""><img src="../images/icon-facebook.png"></a>
-            <a href=""><img src="../images/icon-tiktok.png"></a>
-        </div>
-        <h1>Art Showcase</h1>
-        <a id="login-button" href="#">Login</a>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="commission.html">Commissions</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="home-main">
-        <section class="welcome-section">
+    <div data-include="../components/artshowcaseheader.html"></div>
+    <main id="home-main">
+        <section>
             <h2>Welcome</h2>
             <p>Some default text to fill some space, and something more so there is more text.</p>
-            <button id="gallery-button" onclick="window.location.href='gallery.html'">View Artwork</button>
+            <button id="gallery-button">View Artwork</button>
         </section>
     </main>
-
-    <footer class="footer">
-        <p>&copy; 2025 Art Showcase by Candise Huskey. All rights reserved.</p>
-        <p>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>.</p>
-    </footer>
+    <div data-include="../components/artshowcasefooter.html"></div>
+    <script src="../scripts/include.min.js"></script>
+    <script src="../scripts/artshowcase.js"></script>
 </body>
 </html>

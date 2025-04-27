@@ -8,7 +8,7 @@ White: #ffffff
 Black: #000000
 */
 
-.header {
+header {
     position: relative;
     text-align: center;
     padding: 20px 10px;
@@ -20,102 +20,49 @@ h1 {
     margin: 0;
 }
 
-h2:not(.welcome-section h2) {
-    color: #ffffff;
-    background-color: #444444;
-    box-shadow: 0 0 5px #000000;
-    border-radius: 20px;
-}
-
-.welcome-section h2 {
-    font-size: 30px;
-}
-
-.about-section p {
-    max-width: 500px;
-    margin: 20px auto;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.social-media {
+#social-media {
     position: absolute;
     top: 15px;
     left: 10px;
 }
 
-.social-media a {
+#social-media img {
     margin-right: 10px;
-    font-size: 30px;
-    text-decoration: none;
-}
-
-.social-media img {
     width: 22px;
     background-color: #ffffff;
     padding: 5px;
     border-radius: 10px;
 }
 
-a {
-    color: #bababa;
-}
-
-#login-button {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 20px;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.navbar ul {
+#navbar ul {
     list-style-type: none;
-    margin: 10px 0 0 0;
-    padding: 0;
     background-color: #444444;
     overflow: hidden;
     display: flex;
     justify-content: center;
 }
 
-.navbar ul li {
-    margin: 0 10px;
-}
-
-.navbar ul li a {
+#navbar ul li a {
     display: block;
     padding: 14px 20px;
     color: #ffffff;
     text-decoration: none;
 }
 
-.navbar ul li a:hover {
+#navbar ul li a:hover {
     background-color: #555555;
 }
 
-#gallery-button {
-    padding: 10px 20px;
-    font-size: 16px; /* 1em converted */
-    cursor: pointer;
+a {
+    color: #bababa;
 }
 
-.home-main {
-    width: 70vmin;
-    height: 70vmin;
-    background: url('../images/Grafite-su-Carta-Fabriano-1977.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
+footer {
     background-color: #333333;
-    box-shadow: 0 0 20px #000000;
-    border-radius: 20px;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
 }
 
 html, body {
@@ -141,9 +88,43 @@ main {
     flex: 1;
 }
 
-.welcome-section {
+h2:not(#home-main h2) {
+    color: #ffffff;
+    background-color: #444444;
+    box-shadow: 0 0 5px #000000;
+    border-radius: 20px;
+}
+
+#home-main {
+    width: 70vmin;
+    height: 70vmin;
+    background: url('../images/Grafite-su-Carta-Fabriano-1977.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #333333;
+    box-shadow: 0 0 20px #000000;
+    border-radius: 20px;
     position: relative;
     z-index: 2;
+}
+
+#about-section p {
+    max-width: 500px;
+    margin: 20px auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#gallery-button {
+    padding: 10px 20px;
+    font-size: 16px; /* 1em converted */
+    cursor: pointer;
 }
 
 #gallery-button {
@@ -157,33 +138,36 @@ main {
     border-radius: 10px;
 }
 
-.gallery-section {
+#gallery-section {
     text-align: center;
 }
 
-.gallery-grid {
+#gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     margin-top: 30px;
 }
 
-.gallery-grid img {
+#gallery-grid img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px #000000;
 }
 
-.gallery-grid figcaption {
+#gallery-grid figcaption {
     color: #ffffff;
     margin-top: 10px;
     font-size: 14px;
 }
 
-.commission-button {
+#commission-section ul{
+    margin-bottom: 50px;
+}
+
+#commission-button {
     display: inline-block;
-    margin-top: 20px;
     padding: 12px 24px;
     background-color: #4f00e1; /* Chrysler Blue */
     color: #ffffff;
@@ -193,15 +177,15 @@ main {
     transition: background-color 0.3s ease;
 }
 
-.commission-button:hover {
+#commission-button:hover {
     background-color: #333333; /* Jet on hover */
 }
 
-.form-section {
+#form-section {
     text-align: center;
 }
 
-.form-section p {
+#form-section p {
     max-width: 500px;
     margin: 20px auto;
     font-size: 16px;
@@ -209,14 +193,14 @@ main {
     color: #ffffff;
 }
 
-.commission-form {
+#commission-form {
     display: flex;
     flex-direction: column;
     max-width: 500px;
     margin: 30px auto;
 }
 
-.commission-form label {
+#commission-form label {
     text-align: left;
     margin-top: 15px;
     margin-bottom: 5px;
@@ -224,9 +208,9 @@ main {
     color: #444444;
 }
 
-.commission-form input,
-.commission-form select,
-.commission-form textarea {
+#commission-form input,
+#commission-form select,
+#commission-form textarea {
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #555555;
@@ -235,11 +219,11 @@ main {
     font-size: 16px;
 }
 
-.commission-form textarea {
+#commission-form textarea {
     resize: vertical;
 }
 
-.commission-form button {
+#commission-form button {
     margin-top: 20px;
     padding: 12px 24px;
     background-color: #4f00e1; /* Chrysler Blue */
@@ -251,18 +235,18 @@ main {
     transition: background-color 0.3s ease;
 }
 
-.commission-form button:hover {
+#commission-form button:hover {
     background-color: #333333; /* Jet on hover */
 }
 
-.contact-form {
+#contact-form {
     display: flex;
     flex-direction: column;
     max-width: 500px;
     margin: 30px auto;
 }
 
-.contact-form label {
+#contact-form label {
     text-align: left;
     margin-top: 15px;
     margin-bottom: 5px;
@@ -270,8 +254,8 @@ main {
     color: #444444;
 }
 
-.contact-form input,
-.contact-form textarea {
+#contact-form input,
+#contact-form textarea {
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #555555;
@@ -280,17 +264,8 @@ main {
     font-size: 16px;
 }
 
-.contact-form textarea {
+#contact-form textarea {
     resize: vertical;
-}
-
-
-.footer {
-    background-color: #333333;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 40px;
 }
 
 /* Rule Overrides For Laptops / Small Screens */
