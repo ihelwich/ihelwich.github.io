@@ -1,21 +1,131 @@
 /*
 Color Scheme:
 Chrysler Blue: #4f00e1
+Jet: #333333
+Onyx: #444444
+Davy's Gray: #555555
+Silver: #bababa
+White: #ffffff
 */
 
-header, footer{
+.header {
+    position: relative;
     text-align: center;
+    padding: 20px 10px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+h1 {
+    margin: 0;
+}
+
+.social-media {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+.social-media a {
+    margin-right: 10px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.social-media img{
+    width: 22px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 a{
-    color: #4f00e1;
-    padding: 3px;
+    color: #bababa;
 }
 
-main {
-    max-width: 1200px; /* Adjust as needed */
-    width: 90%; /* Adjust percentage based on design requirements */
-    margin: 0 auto; /* Centers the content horizontally */
+#login-button {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    background-color: #444444;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    background-color: #555555;
+}
+
+
+.welcome-section h2 {
+    font-size: 2em;
+}
+
+#gallery-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.home-main {
+    position: relative;
+    text-align: center;
+    margin: 40px auto;
+    width: 70vmin; /* 70% of the smaller side (viewport min dimension) */
+    height: 70vmin; /* Same as width, makes it a perfect square */
+    background: url('../images/Grafite-su-Carta-Fabriano-1977.jpg') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 20px #000000;
+}
+
+.welcome-section {
+    position: relative;
+    z-index: 2;
+}
+
+#gallery-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #555555;
+    border: 1px solid white;
+    color: white;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
 }
 
 /* Rule Overrides For Laptops / Small Screens */
