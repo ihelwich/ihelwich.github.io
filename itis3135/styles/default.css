@@ -177,6 +177,66 @@ input{
     margin: 0 15px 0 5px;
 }
 
+#slides-section{
+    display: flex;
+    justify-content: center;
+}
+
+#previous{
+    margin: 0;
+    position: relative;
+    left: 40px;
+    top: 16px;
+    width: 40px;
+    height: 500px;
+    font-size: 20px;
+}
+
+#next{
+    margin: 0;
+    position: relative;
+    right: 40px;
+    top: 16px;
+    width: 40px;
+    height: 500px;
+    font-size: 20px;
+}
+
+#first{
+    display: block;
+}
+
+.slides{
+    display: none;
+}
+
+.slide-captions{
+    font-size: 30px;
+}
+
+#thumbnails img{
+    width: 40px;
+    margin: 2px 2px;
+}
+
+#thumbnails img:hover{
+    margin: 0;
+    border: 2px solid #49111c;
+}
+
+#thumbnail-captions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 39px;
+    margin: 0 0 40px 10px;
+}
+
+#thumbnails p {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+}
 /* Rule Overrides For Laptops / Small Screens */
 @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
     html {
