@@ -189,6 +189,7 @@ h2:not(.home-h2) {
 }
 
 #commission-section ul{
+    list-style-type: none;
     margin-bottom: 50px;
 }
 
