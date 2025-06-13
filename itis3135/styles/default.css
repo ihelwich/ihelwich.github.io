@@ -43,8 +43,15 @@ body{
     background-color: #a9927d;
     color: #0a0908;
     font-family: garamond, serif;
-    width: 1000px;
+    width: 75%px;
     margin: 0 auto;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 20%;
+    right: 20%;
 }
 
 tr{
