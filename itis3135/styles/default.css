@@ -47,11 +47,11 @@ body{
     margin: 0 0 50px 0 auto;
 }
 
-#footer{
+footer{
     position: absolute;
     bottom: 0;
-    left: 20%;
-    right: 20%;
+    left: 10%;
+    right: 10%;
 }
 
 tr{
