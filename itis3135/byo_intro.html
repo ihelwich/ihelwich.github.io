@@ -8,114 +8,116 @@
     <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
-    <div data-include="components/header.html"></div>
-    <main>
-        <h2>BYO Introduction</h2>  
-        <h3>Time to build your own Intro page, please fill out the form below so we can create your own page.</h3>
-        <form>
-            <span id="identifiers">
-                <span>
-                    <label for="first-name" class="identifier-labels">First Name</label>
-                    <input id="first-name" type="text" class="identifier-inputs" placeholder="e.g. Yoshikage" name="first-name" value="Isaiah" required>
-                </span>
-                <span>
-                    <label for="middle-initial" class="identifier-labels">Middle Initial</label>
-                    <input id="middle-initial" type="text" class="identifier-inputs" placeholder="e.g. K" name="middle-initial" value="M" required>
-                </span>
-                <span>
-                    <label for="last-name" class="identifier-labels">Last Name</label>
-                    <input id="last-name" type="text" class="identifier-inputs" placeholder="e.g. Kira" name="last-name" value="Helwich" required>
-                </span>
-                <span>
-                    <label for="nickname" class="identifier-labels">Nickname</label>
-                    <input id="nickname" type="text" class="identifier-inputs" placeholder="e.g. Killer Queen" name="nickname">
-                </span>
-                <span>
-                    <label for="mascot" class="identifier-labels">Mascot</label>
-                    <input id="mascot" type="text" class="identifier-inputs" placeholder="e.g. Yappy Keyboards" name="mascot" value="Iron Hawk" required>
-                </span>
-            </span> 
+    <div id="page-wrapper">
+        <div data-include="components/header.html"></div>
+        <main>
+            <h2>BYO Introduction</h2>  
+            <h3>Time to build your own Intro page, please fill out the form below so we can create your own page.</h3>
+            <form>
+                <span id="identifiers">
+                    <span>
+                        <label for="first-name" class="identifier-labels">First Name</label>
+                        <input id="first-name" type="text" class="identifier-inputs" placeholder="e.g. Yoshikage" name="first-name" value="Isaiah" required>
+                    </span>
+                    <span>
+                        <label for="middle-initial" class="identifier-labels">Middle Initial</label>
+                        <input id="middle-initial" type="text" class="identifier-inputs" placeholder="e.g. K" name="middle-initial" value="M" required>
+                    </span>
+                    <span>
+                        <label for="last-name" class="identifier-labels">Last Name</label>
+                        <input id="last-name" type="text" class="identifier-inputs" placeholder="e.g. Kira" name="last-name" value="Helwich" required>
+                    </span>
+                    <span>
+                        <label for="nickname" class="identifier-labels">Nickname</label>
+                        <input id="nickname" type="text" class="identifier-inputs" placeholder="e.g. Killer Queen" name="nickname">
+                    </span>
+                    <span>
+                        <label for="mascot" class="identifier-labels">Mascot</label>
+                        <input id="mascot" type="text" class="identifier-inputs" placeholder="e.g. Yappy Keyboards" name="mascot" value="Iron Hawk" required>
+                    </span>
+                </span> 
 
-            <label for="image">Image</label>
-            <input id="image" type="file">
+                <label for="image">Image</label>
+                <input id="image" type="file">
 
-            <span id="image-captions">
-                <label for="image-alt-caption">Image Alt</label>
-                <input id="image-alt-caption" type="text" value="headshot">
+                <span id="image-captions">
+                    <label for="image-alt-caption">Image Alt</label>
+                    <input id="image-alt-caption" type="text" value="headshot">
 
-                <label for="image-caption">Image Caption</label>
-                <input id="image-caption" type="text" value="professional-headshot" required>
-            </span>
-            
-            <label for="personal-background">Personal Background</label>
-            <input id="personal-background" type="text" placeholder="e.g. I'm 33 years old. My house is in the northeast section of..." name="personal-background" value="I’ve lived in Charlotte my whole life. I have yet to travel outside of a few states." required>
-            
-            <label for="professional-background">Professional Background</label>
-            <input id="professional-background" type="text" placeholder="e.g. I work as an employee for the Kame Yu department stores..." name="professional-background" value="I’ve been working at Starbucks for nearly two years." required>
-            
-            <label for="academic-background">Academic Background</label>
-            <input id="academic-background" type="text" placeholder="e.g. ITIS3135 Web-Based Application Design and Development" name="academic-background" value="I’m pursuing a Bachelor of Science in Computer Science degree with a concentration in cyber security. I’m considering returning after for a Master’s in cyber security or possibly a different major." required>
-            
-            <label for="web-development-background">Background in Web Development</label>
-            <input id="web-development-background" type="text" placeholder="e.g. 2 years experience with HTML" name="web-development-background" value="I have experience with HTML and CSS from using freeCodeCamp a while back. I have some (but considerably less) experience with JavaScript from the same organization." required>
-            
-            <label for="primary-computer-platform">Primary Computer Platform</label>
-            <input id="primary-computer-platform" type="text" placeholder="e.g. VAIOS SX-R Windows 10" name="primary-computer-platform" value="Windows 11 Laptop" required>
-            
-            <p id="courses">Courses I'm Taking & Why</p>
-            <ul id="course-list">
-                <li>
-                    <input class="course-code" placeholder="e.g. ITIS 3135" value="STAT2122" required>
-                    <input class="course-name" placeholder="e.g. Web-Based Application Design and Development"  value="Intro to Probability & Statisitics" required>
-                    <input class="course-reason" placeholder="e.g. Required"  value="Required" required>
-                    <button type="button" class="delete-course" onclick="this.closest('li').remove()">Delete Course</button>
-                </li>
-                <li>
-                    <input class="course-code" placeholder="e.g. ITIS 3135" value="ITIS3135" required>
-                    <input class="course-name" placeholder="e.g. Web-Based Application Design and Development"  value="Web-Based Application Design and Development" required>
-                    <input class="course-reason" placeholder="e.g. Required"  value="Required" required>
-                    <button type="button" class="delete-course" onclick="this.closest('li').remove()">Delete Course</button>
-                </li>
-                <li>
-                    <input class="course-code" placeholder="e.g. ITIS 3135" value="ITCS3160" required>
-                    <input class="course-name" placeholder="e.g. Web-Based Application Design and Development"  value="Database Design and Implementation" required>
-                    <input class="course-reason" placeholder="e.g. Required"  value="Required" required>
-                    <button type="button" class="delete-course" onclick="this.closest('li').remove()">Delete Course</button>
-                </li>
-                <li>
-                    <input class="course-code" placeholder="e.g. ITIS 3135" value="ITIS3200" required>
-                    <input class="course-name" placeholder="e.g. Web-Based Application Design and Development"  value="Intro to Info Security & Privacy" required>
-                    <input class="course-reason" placeholder="e.g. Required"  value="Required" required>
-                    <button type="button" class="delete-course" onclick="this.closest('li').remove()">Delete Course</button>
-                </li>
-                <li>
-                    <input class="course-code" placeholder="e.g. ITIS 3135"  value="ITSC3688" required>
-                    <input class="course-name" placeholder="e.g. Web-Based Application Design and Development"  value="Computers and Their Impact on Society" required>
-                    <input class="course-reason" placeholder="e.g. Required"  value="Required" required>
-                    <button type="button" class="delete-course" onclick="this.closest('li').remove()">Delete Course</button>
-                </li>
-            </ul>
-            <button id="add-course">Add Course</button>
-    
-            <label for="fun-fact">Funny/Interesting Item To Remember Me By</label>
-            <input id="fun-fact" type="text" placeholder="e.g. I've been to every BTS tour in the US" name="interesting-item-to-remember-me-by" value="I’m one of the founding members of the Charlotte Boxing Club here at UNCC.">
-            
-            <label for="additional-fact">I'd Also Like To Share:</label>
-            <input id="additional-fact" type="text" placeholder="e.g. I am proficient in pyrotechnics" name="i'd-also-like-to-share" value="I often carry a chessboard with me and I’m always ready to play!">
+                    <label for="image-caption">Image Caption</label>
+                    <input id="image-caption" type="text" value="professional-headshot" required>
+                </span>
+                
+                <label for="personal-background">Personal Background</label>
+                <input id="personal-background" type="text" placeholder="e.g. I'm 33 years old. My house is in the northeast section of..." name="personal-background" value="I’ve lived in Charlotte my whole life. I have yet to travel outside of a few states." required>
+                
+                <label for="professional-background">Professional Background</label>
+                <input id="professional-background" type="text" placeholder="e.g. I work as an employee for the Kame Yu department stores..." name="professional-background" value="I’ve been working at Starbucks for nearly two years." required>
+                
+                <label for="academic-background">Academic Background</label>
+                <input id="academic-background" type="text" placeholder="e.g. ITIS3135 Web-Based Application Design and Development" name="academic-background" value="I’m pursuing a Bachelor of Science in Computer Science degree with a concentration in cyber security. I’m considering returning after for a Master’s in cyber security or possibly a different major." required>
+                
+                <label for="web-development-background">Background in Web Development</label>
+                <input id="web-development-background" type="text" placeholder="e.g. 2 years experience with HTML" name="web-development-background" value="I have experience with HTML and CSS from using freeCodeCamp a while back. I have some (but considerably less) experience with JavaScript from the same organization." required>
+                
+                <label for="primary-computer-platform">Primary Computer Platform</label>
+                <input id="primary-computer-platform" type="text" placeholder="e.g. VAIOS SX-R Windows 10" name="primary-computer-platform" value="Windows 11 Laptop" required>
+                
+                <p id="courses">Courses I'm Taking & Why</p>
+                <ul id="course-list">
+                    <li>
+                        <input class="course-code" placeholder="e.g. ITIS 3135" value="STAT2122" required>
+                        <input class="course-name" placeholder="e.g. Web-Based Application Design and Development"  value="Intro to Probability & Statisitics" required>
+                        <input class="course-reason" placeholder="e.g. Required"  value="Required" required>
+                        <button type="button" class="delete-course" onclick="this.closest('li').remove()">Delete Course</button>
+                    </li>
+                    <li>
+                        <input class="course-code" placeholder="e.g. ITIS 3135" value="ITIS3135" required>
+                        <input class="course-name" placeholder="e.g. Web-Based Application Design and Development"  value="Web-Based Application Design and Development" required>
+                        <input class="course-reason" placeholder="e.g. Required"  value="Required" required>
+                        <button type="button" class="delete-course" onclick="this.closest('li').remove()">Delete Course</button>
+                    </li>
+                    <li>
+                        <input class="course-code" placeholder="e.g. ITIS 3135" value="ITCS3160" required>
+                        <input class="course-name" placeholder="e.g. Web-Based Application Design and Development"  value="Database Design and Implementation" required>
+                        <input class="course-reason" placeholder="e.g. Required"  value="Required" required>
+                        <button type="button" class="delete-course" onclick="this.closest('li').remove()">Delete Course</button>
+                    </li>
+                    <li>
+                        <input class="course-code" placeholder="e.g. ITIS 3135" value="ITIS3200" required>
+                        <input class="course-name" placeholder="e.g. Web-Based Application Design and Development"  value="Intro to Info Security & Privacy" required>
+                        <input class="course-reason" placeholder="e.g. Required"  value="Required" required>
+                        <button type="button" class="delete-course" onclick="this.closest('li').remove()">Delete Course</button>
+                    </li>
+                    <li>
+                        <input class="course-code" placeholder="e.g. ITIS 3135"  value="ITSC3688" required>
+                        <input class="course-name" placeholder="e.g. Web-Based Application Design and Development"  value="Computers and Their Impact on Society" required>
+                        <input class="course-reason" placeholder="e.g. Required"  value="Required" required>
+                        <button type="button" class="delete-course" onclick="this.closest('li').remove()">Delete Course</button>
+                    </li>
+                </ul>
+                <button id="add-course">Add Course</button>
+        
+                <label for="fun-fact">Funny/Interesting Item To Remember Me By</label>
+                <input id="fun-fact" type="text" placeholder="e.g. I've been to every BTS tour in the US" name="interesting-item-to-remember-me-by" value="I’m one of the founding members of the Charlotte Boxing Club here at UNCC.">
+                
+                <label for="additional-fact">I'd Also Like To Share:</label>
+                <input id="additional-fact" type="text" placeholder="e.g. I am proficient in pyrotechnics" name="i'd-also-like-to-share" value="I often carry a chessboard with me and I’m always ready to play!">
 
-            <span id="check">
-                <input id="checkbox" type="checkbox" checked required>
-                <label for="checkbox">"I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available."</label>
-            </span>
+                <span id="check">
+                    <input id="checkbox" type="checkbox" checked required>
+                    <label for="checkbox">"I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available."</label>
+                </span>
 
-            <span id="control-buttons">
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
-            </span>
-        </form>
-    </main>
-    <div data-include="components/footer.html"></div>
-    <script src="scripts/include.min.js"></script>
-    <script src="scripts/survey.js"></script>
+                <span id="control-buttons">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </span>
+            </form>
+        </main>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/include.min.js"></script>
+        <script src="scripts/survey.js"></script>
+    </div>
 </body>
 </html>

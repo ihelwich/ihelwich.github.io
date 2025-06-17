@@ -8,171 +8,173 @@
     <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
-    <div data-include="components/header.html"></div>
-    <main>
-        <h2>Activity - HTML Tables - Whimsical Company</h2>  
+    <div id="page-wrapper">
+        <div data-include="components/header.html"></div>
+        <main>
+            <h2>Activity - HTML Tables - Whimsical Company</h2>  
 
-        <h3>My Tabular Data</h3>
-        <ol>
-            <li>Tina Sparks - tina.sparks@gmail.com - 5</li>
-            <li>Marcus Flintstone - flint.marcus@gmail.com - 12</li>
-            <li>Janelle Rivera - jrivera_works@yahoo.com - 7</li>
-            <li>Bobby McZoom - bobby.mcz@gmail.com - 3</li>
-            <li>Aisha Nakamura - a.nakamura88@gmail.com - 18</li>
-            <li>Leo Grizzly - leo.graham@yahoo.com - 9</li>
-            <li>Sandra Jetson - sandra.jetson@hotmail.com - 24</li>
-            <li>Darius Cole - dariuscole@gmail.com - 2</li>
-            <li>Nina Volt - nina.vee@yahoo.com - 11</li>
-            <li>Tyson Blaze - tysonb@hotmail.com - 16</li>
-        </ol>
+            <h3>My Tabular Data</h3>
+            <ol>
+                <li>Tina Sparks - tina.sparks@gmail.com - 5</li>
+                <li>Marcus Flintstone - flint.marcus@gmail.com - 12</li>
+                <li>Janelle Rivera - jrivera_works@yahoo.com - 7</li>
+                <li>Bobby McZoom - bobby.mcz@gmail.com - 3</li>
+                <li>Aisha Nakamura - a.nakamura88@gmail.com - 18</li>
+                <li>Leo Grizzly - leo.graham@yahoo.com - 9</li>
+                <li>Sandra Jetson - sandra.jetson@hotmail.com - 24</li>
+                <li>Darius Cole - dariuscole@gmail.com - 2</li>
+                <li>Nina Volt - nina.vee@yahoo.com - 11</li>
+                <li>Tyson Blaze - tysonb@hotmail.com - 16</li>
+            </ol>
 
-        <h3 style="margin-top: 80px">Employee Data in Simple Table</h3>
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Years of Service</th>
-            </tr>
-            <tr>
-                <td>Tina Sparks</td>
-                <td>tina.sparks@gmail.com</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>Marcus Flintstone</td>
-                <td>flint.marcus@gmail.com</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Janelle Rivera</td>
-                <td>jrivera_works@yahoo.com</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>Bobby McZoom</td>
-                <td>bobby.mcz@gmail.com</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>Aisha Nakamura</td>
-                <td>a.nakamura88@gmail.com</td>
-                <td>18</td>
-            </tr>
-            <tr>
-                <td>Leo Grizzly</td>
-                <td>leo.g@gmail.com</td>
-                <td>9</td>
-            </tr>
-            <tr>
-                <td>Sandra Jetson</td>
-                <td>sandra.jetson@gmail.com</td>
-                <td>24</td>
-            </tr>
-            <tr>
-                <td>Darius Cole</td>
-                <td>dariuscole@gmail.com</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>Nina Volt</td>
-                <td>nina.v@gmail.com</td>
-                <td>11</td>
-            </tr>
-            <tr>
-                <td>Tyson Blaze</td>
-                <td>tysonb@gmail.com</td>
-                <td>16</td>
-            </tr>
-        </table>
-
-        <h3 style="margin-top: 80px">Employee Data in Complex Table</h3>
-        <figure>
+            <h3 style="margin-top: 80px">Employee Data in Simple Table</h3>
             <table>
                 <tr>
-                    <th>Rank</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Years of Service</th>
-                    <th>Monthly Salary</th>
                 </tr>
                 <tr>
-                    <td class="ranks">Gold</td>
                     <td>Tina Sparks</td>
                     <td>tina.sparks@gmail.com</td>
                     <td>5</td>
-                    <td>$15,000</td>
                 </tr>
                 <tr>
-                    <td class="ranks" rowspan="3">Silver</td>
-                    <td>Bobby McZoom</td>
-                    <td>bobby.mcz@gmail.com</td>
-                    <td>3</td>
-                    <td>$9,000</td>
-                </tr>
-                <tr>
-                    <td>Sandra Jetson</td>
-                    <td>sandra.jetson@gmail.com</td>
-                    <td>24</td>
-                    <td>$9,000</td>
-                </tr>
-                <tr>
-                    <td>Darius Cole</td>
-                    <td>dariuscole@gmail.com</td>
-                    <td>2</td>
-                    <td>$9,000</td>
-                </tr>
-                <tr>
-                    <td class="ranks" rowspan="6">Bronze</td>
                     <td>Marcus Flintstone</td>
                     <td>flint.marcus@gmail.com</td>
                     <td>12</td>
-                    <td>$6,000</td>
                 </tr>
                 <tr>
                     <td>Janelle Rivera</td>
                     <td>jrivera_works@yahoo.com</td>
                     <td>7</td>
-                    <td>$6,000</td>
+                </tr>
+                <tr>
+                    <td>Bobby McZoom</td>
+                    <td>bobby.mcz@gmail.com</td>
+                    <td>3</td>
                 </tr>
                 <tr>
                     <td>Aisha Nakamura</td>
                     <td>a.nakamura88@gmail.com</td>
                     <td>18</td>
-                    <td>$6,000</td>
                 </tr>
                 <tr>
                     <td>Leo Grizzly</td>
                     <td>leo.g@gmail.com</td>
                     <td>9</td>
-                    <td>$6,000</td>
+                </tr>
+                <tr>
+                    <td>Sandra Jetson</td>
+                    <td>sandra.jetson@gmail.com</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>Darius Cole</td>
+                    <td>dariuscole@gmail.com</td>
+                    <td>2</td>
                 </tr>
                 <tr>
                     <td>Nina Volt</td>
                     <td>nina.v@gmail.com</td>
                     <td>11</td>
-                    <td>$6,000</td>
                 </tr>
                 <tr>
                     <td>Tyson Blaze</td>
                     <td>tysonb@gmail.com</td>
                     <td>16</td>
-                    <td>$6,000</td>
-                </tr>
-                <tr>
-                    <th colspan="3">Total Years of Service</th>
-                    <td>107</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th colspan="3">Total Monthly Salary</th>
-                    <td></td>
-                    <td>$78,000</td>
                 </tr>
             </table>
-            <figcaption>Employee Ranks</figcaption>
-        </figure>
-    </main>
-    <div data-include="components/footer.html"></div>
-    <script src="scripts/include.min.js"></script>
+
+            <h3 style="margin-top: 80px">Employee Data in Complex Table</h3>
+            <figure>
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Years of Service</th>
+                        <th>Monthly Salary</th>
+                    </tr>
+                    <tr>
+                        <td class="ranks">Gold</td>
+                        <td>Tina Sparks</td>
+                        <td>tina.sparks@gmail.com</td>
+                        <td>5</td>
+                        <td>$15,000</td>
+                    </tr>
+                    <tr>
+                        <td class="ranks" rowspan="3">Silver</td>
+                        <td>Bobby McZoom</td>
+                        <td>bobby.mcz@gmail.com</td>
+                        <td>3</td>
+                        <td>$9,000</td>
+                    </tr>
+                    <tr>
+                        <td>Sandra Jetson</td>
+                        <td>sandra.jetson@gmail.com</td>
+                        <td>24</td>
+                        <td>$9,000</td>
+                    </tr>
+                    <tr>
+                        <td>Darius Cole</td>
+                        <td>dariuscole@gmail.com</td>
+                        <td>2</td>
+                        <td>$9,000</td>
+                    </tr>
+                    <tr>
+                        <td class="ranks" rowspan="6">Bronze</td>
+                        <td>Marcus Flintstone</td>
+                        <td>flint.marcus@gmail.com</td>
+                        <td>12</td>
+                        <td>$6,000</td>
+                    </tr>
+                    <tr>
+                        <td>Janelle Rivera</td>
+                        <td>jrivera_works@yahoo.com</td>
+                        <td>7</td>
+                        <td>$6,000</td>
+                    </tr>
+                    <tr>
+                        <td>Aisha Nakamura</td>
+                        <td>a.nakamura88@gmail.com</td>
+                        <td>18</td>
+                        <td>$6,000</td>
+                    </tr>
+                    <tr>
+                        <td>Leo Grizzly</td>
+                        <td>leo.g@gmail.com</td>
+                        <td>9</td>
+                        <td>$6,000</td>
+                    </tr>
+                    <tr>
+                        <td>Nina Volt</td>
+                        <td>nina.v@gmail.com</td>
+                        <td>11</td>
+                        <td>$6,000</td>
+                    </tr>
+                    <tr>
+                        <td>Tyson Blaze</td>
+                        <td>tysonb@gmail.com</td>
+                        <td>16</td>
+                        <td>$6,000</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Total Years of Service</th>
+                        <td>107</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Total Monthly Salary</th>
+                        <td></td>
+                        <td>$78,000</td>
+                    </tr>
+                </table>
+                <figcaption>Employee Ranks</figcaption>
+            </figure>
+        </main>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/include.min.js"></script>
+    </div>
 </body>
 </html>

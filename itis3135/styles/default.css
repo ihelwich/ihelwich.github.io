@@ -33,9 +33,9 @@ a img{
 }
 
 main {
-    max-width: 1200px; /* Adjust as needed */
-    width: 90%; /* Adjust percentage based on design requirements */
-    margin: 0 auto; /* Centers the content horizontally */
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 body{
@@ -45,6 +45,16 @@ body{
     font-family: garamond, serif;
     width: 80%;
     margin: 0 auto 50px;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+}
+
+#page-wrapper{
+    display: flex;
+    flex-direction: column;
 }
 
 tr{
