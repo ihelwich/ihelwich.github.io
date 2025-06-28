@@ -21,6 +21,10 @@ ol{
     list-style-type: none;
 }
 
+p{
+    max-width: 80%;
+}
+
 a{
     color: #49111c;
     padding: 3px;
