@@ -26,6 +26,10 @@ p{
     margin: 10px auto;
 }
 
+#credit{
+    max-width: 100%;
+}
+
 a{
     color: #49111c;
     padding: 3px;
