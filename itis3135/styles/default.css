@@ -26,6 +26,16 @@ p{
     margin: 10px auto;
 }
 
+#index-p{
+    font-size: 25px;
+    max-width: 100%;
+    margin: -30px auto 0;
+}
+
+h2{
+    font-size: 35px;
+}
+
 #credit{
     max-width: 100%;
 }
