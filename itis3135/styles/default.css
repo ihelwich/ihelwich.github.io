@@ -216,6 +216,7 @@ input{
 #slides-section{
     display: flex;
     justify-content: center;
+    margin-top: 0;
 }
 
 #previous{
@@ -299,6 +300,18 @@ input{
   border: 2px solid #49111c;
 }
 
+#evaluations p {
+    margin-bottom: 20px;
+}
+
+#evaluations h3 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#evaluations ul {
+    margin-bottom: 30px;
+}
 
 /* Rule Overrides For Laptops / Small Screens */
 @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
