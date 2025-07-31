@@ -300,13 +300,13 @@ input{
   border: 2px solid #49111c;
 }
 
-#evaluations p {
-    margin-bottom: 20px;
-}
-
-#evaluations h3 {
+h3 {
     margin-top: 40px;
     margin-bottom: 10px;
+}
+
+#evaluations p {
+    margin-bottom: 20px;
 }
 
 #evaluations ul {
