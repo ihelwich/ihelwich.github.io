@@ -8,53 +8,16 @@ White: #ffffff
 Black: #000000
 */
 
-header {
-    position: relative;
-    text-align: center;
-    padding: 20px 10px;
-    background-color: #333333;
-    color: #ffffff;
-}
-
-h1 {
-    margin: 0;
-}
-
-#social-media {
-    position: absolute;
-    top: 15px;
-    left: 10px;
-}
-
-#social-media img {
-    margin-right: 10px;
-    width: 25px;
-    background-color: #ffffff;
-    border-radius: 10px;
-}
-
-#navbar ul {
-    list-style-type: none;
-    background-color: #444444;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-
-#navbar ul li a {
-    display: block;
-    padding: 14px 20px;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-#navbar ul li a:hover {
-    background-color: #e2e200;
-    color: #444444;
-}
+/* === Element Selectors === */
 
 a {
     color: #bababa;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 footer {
@@ -65,16 +28,35 @@ footer {
     margin-top: 40px;
 }
 
+h1 {
+    margin: 0;
+}
+
+h2:not(.home-h2) {
+    color: #ffffff;
+    background-color: #444444;
+    box-shadow: 0 0 5px #000000;
+    border-radius: 20px;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px #000000;
 }
 
 main {
@@ -87,31 +69,21 @@ main {
     flex: 1;
 }
 
-h2:not(.home-h2) {
-    color: #ffffff;
+/* === Class Selectors === */
+
+.form-response {
     background-color: #444444;
-    box-shadow: 0 0 5px #000000;
-    border-radius: 20px;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    max-width: 500px;
+    margin: 30px auto;
+    box-shadow: 0 0 10px #000000;
 }
 
-#home-main {
-    width: 70vmin;
-    height: 70vmin;
-    background: url(../images/Grafite-su-Carta-Fabriano-1977.jpg) no-repeat center center;
-    background-size: cover;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    background-color: #333333;
-    box-shadow: 0 0 20px #000000;
-    border-radius: 20px;
-    position: relative;
-    z-index: 2;
-}
+/* === ID Selectors === */
 
 #about-section p {
     max-width: 500px;
@@ -120,10 +92,111 @@ h2:not(.home-h2) {
     line-height: 1.6;
 }
 
-#gallery-button {
-    padding: 10px 20px;
+#commission-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #e2e200;
+    color: #555555;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#commission-button:hover {
+    background-color: #ffff00;
+}
+
+#commission-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+#commission-form button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #e2e200;
+    color: #444444;
+    border: none;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#commission-form button:hover {
+    background-color: #ffff00;
+}
+
+#commission-form input,
+#commission-form select,
+#commission-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #555555;
+    background-color: #444444;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#commission-form label {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #444444;
+}
+
+#commission-form textarea {
+    resize: vertical;
+}
+
+#commission-section ul {
+    list-style-type: none;
+    margin-bottom: 50px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #555555;
+    background-color: #444444;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#contact-form label {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #444444;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#form-section {
+    text-align: center;
+}
+
+#form-section p {
+    max-width: 500px;
+    margin: 20px auto;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
 }
 
 #gallery-button {
@@ -147,6 +220,12 @@ h2:not(.home-h2) {
     gap: 20px;
 }
 
+#gallerygrid figcaption {
+    color: #555555;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
 #gallerygrid img {
     width: 150%;
     height: auto;
@@ -154,10 +233,23 @@ h2:not(.home-h2) {
     box-shadow: 0 0 10px #000000;
 }
 
-#gallerygrid figcaption {
-    color: #555555;
-    margin-top: 10px;
-    font-size: 14px;
+#home-main {
+    width: 70vmin;
+    height: 70vmin;
+    background: url(../images/Grafite-su-Carta-Fabriano-1977.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #333333;
+    box-shadow: 0 0 20px #000000;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 #lightbox {
@@ -173,13 +265,6 @@ h2:not(.home-h2) {
     justify-content: center;
 }
 
-#lightbox-img {
-    width: 90vw;
-    height: auto;
-    max-height: 90vh;
-    object-fit: contain;
-}
-
 #lightbox-close {
     position: absolute;
     top: 20px;
@@ -189,146 +274,60 @@ h2:not(.home-h2) {
     cursor: pointer;
 }
 
-#commission-section ul{
+#lightbox-img {
+    width: 90vw;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+#navbar ul {
     list-style-type: none;
-    margin-bottom: 50px;
+    background-color: #444444;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
-#commission-button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #e2e200;
-    color: #555555;
-    font-size: 16px;
+#navbar ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
 }
 
-#commission-button:hover {
-    background-color: #ffff00;
-}
-
-#form-section {
-    text-align: center;
-}
-
-#form-section p {
-    max-width: 500px;
-    margin: 20px auto;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #ffffff;
-}
-
-#commission-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 30px auto;
-}
-
-#commission-form label {
-    text-align: left;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-size: 16px;
-    color: #444444;
-}
-
-#commission-form input,
-#commission-form select,
-#commission-form textarea {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #555555;
-    background-color: #444444;
-    color: #ffffff;
-    font-size: 16px;
-}
-
-#commission-form textarea {
-    resize: vertical;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  box-shadow: 0px 0px 10px #000000;
-}
-
-#commission-form button {
-    margin-top: 20px;
-    padding: 12px 24px;
+#navbar ul li a:hover {
     background-color: #e2e200;
     color: #444444;
-    border: none;
+}
+
+#social-media {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+#social-media img {
+    margin-right: 10px;
+    width: 25px;
+    background-color: #ffffff;
     border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-#commission-form button:hover {
-    background-color: #ffff00;
-}
+/* === Media Queries === */
 
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 30px auto;
-}
-
-#contact-form label {
-    text-align: left;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-size: 16px;
-    color: #444444;
-}
-
-#contact-form input,
-#contact-form textarea {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #555555;
-    background-color: #444444;
-    color: #ffffff;
-    font-size: 16px;
-}
-
-#contact-form textarea {
-    resize: vertical;
-}
-
-.form-response {
-    background-color: #444444;
-    color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 18px;
-    text-align: center;
-    max-width: 500px;
-    margin: 30px auto;
-    box-shadow: 0 0 10px #000000;
-}
-
-/* Rule Overrides For Laptops / Small Screens */
 @media screen and (min-width: 981px) and (max-width: 1400px) {
     html {
         font-size: 100%;
     }
 }
 
-/* Rule Overrides For Tablet Devices */
 @media screen and (min-width: 601px) and (max-width: 980px) {
     #colorbox {
         font-size: 80%;
     }
 }
 
-/* Rule Overrides For Mobile Devices */
 @media screen and (min-width: 370px) and (max-width: 600px) {
     #colorbox {
         font-size: 90%;

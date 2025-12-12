@@ -10,6 +10,13 @@ a{
     color: #45364B;
 }
 
+body{
+    text-align: center;
+    color: #2D2327;
+    width: 1000px;
+    margin: 0 auto;
+}
+
 header{
     background-color: #8C93A8;
     text-align: center;
@@ -22,11 +29,4 @@ header{
 
 main{
     padding-top: 110px;
-}
-
-body{
-    text-align: center;
-    color: #2D2327;
-    width: 1000px;
-    margin: 0 auto;
 }

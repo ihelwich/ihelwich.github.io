@@ -1,6 +1,8 @@
-img{
-    width: 400px;
-    height: 400px;
+body{
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-bottom: 40px;
 }
 
 h1{
@@ -24,12 +26,9 @@ h3{
     background-color: purple;
 }
 
-ul{
-    text-align: center;
-    border-left: 15px solid orange;
-    border-right: 25px solid orange;
-    border-top: 25px solid purple;
-    border-bottom: 15px solid purple;
+img{
+    width: 400px;
+    height: 400px;
 }
 
 p{
@@ -39,9 +38,10 @@ p{
     background-color: black;
 }
 
-body{
-    margin-top: 100px;
-    margin-left: 20px;
-    margin-right: 30px;
-    margin-bottom: 40px;
+ul{
+    text-align: center;
+    border-left: 15px solid orange;
+    border-right: 25px solid orange;
+    border-top: 25px solid purple;
+    border-bottom: 15px solid purple;
 }
