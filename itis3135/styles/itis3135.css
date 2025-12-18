@@ -107,8 +107,6 @@ ul {
 .delete-course {
     background-color: #8a0214;
     color: #f2f2f2;
-    position: relative;
-    left: 59%;
 }
 
 .identifier-labels {
@@ -181,6 +179,7 @@ ul {
     margin: 20px;
     width: 30%;
 }
+
 
 #course-list > li {
     margin: 20px auto;
