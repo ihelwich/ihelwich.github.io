@@ -36,10 +36,11 @@ footer {
     padding: 20px;
 }
 
-form {
+form:not(#check) {
     text-align: left;
-    padding: 10px;
+    padding: 10px 0px 10px 30px;
     border: solid;
+    overflow: hidden;
 }
 
 h2 {
@@ -56,13 +57,11 @@ html {
 }
 
 input {
-    width: 100%;
     font-size: 20px;
     display: block;
-    max-width: 90%;
 }
 
-label, #courses {
+label {
     font-size: 30px;
     margin-top: 20px;
     display: block; 
@@ -162,9 +161,8 @@ ul {
     width: 80%;
 }
 
-#form-top-row {
-    display: flex;
-    flex-wrap: wrap;
+#background-section > input{
+    width: 80%;
 }
 
 #checkbox {
@@ -173,6 +171,9 @@ ul {
 
 #check {
     display: flex;
+    max-width: 60%;
+    text-align: center;
+    margin: 0 auto 0 auto;
 }
 
 #check > label {
@@ -194,15 +195,17 @@ ul {
 }
 
 #courses {
-    margin-left: 0px;
+    font-size: 30px;
+    margin: 20px;
+    display: block; 
 }
 
-#course-list > li{
+#course-list > li {
     margin: 20px auto;
 }
 
 #course-list > li > input {
-    max-width: 70%;
+    width: 500px;
 }
 
 #credit {
@@ -221,30 +224,28 @@ ul {
     display: block;
 }
 
+#form-top-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
 #fun-fact {
     width: 80%;
 }
 
-#identifiers {
+#identifiers-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    max-width: 35%
 }
 
-#identifiers > span > input {
-    width: 35%;
-}
-
-#identifiers > span > label {
-    width: 80%;
-}
-
-#image-captions {
+#image-section {
     display: flex;
-}
-
-#image-section > input {
-    max-width: 50%;
+    flex-direction: column;
+    max-width: 35%;
 }
 
 #index-p {
