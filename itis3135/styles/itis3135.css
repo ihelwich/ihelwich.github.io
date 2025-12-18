@@ -12,6 +12,7 @@ Beaver: #a9927d
 a {
     color: #49111c;
     padding: 3px;
+    white-space: nowrap;
 }
 
 a img {
@@ -67,6 +68,10 @@ label, #courses {
     display: block; 
 }
 
+li {
+    margin: 10px 0 10px 0;
+}
+
 main {
     max-width: 1200px;
     width: 90%;
@@ -93,6 +98,10 @@ th {
     color: #a9927d;
 }
 
+ul {
+    text-align: left;
+    margin: 5px 0 5px 0;
+}
 /* === Class Selectors === */
 
 .delete-course {
