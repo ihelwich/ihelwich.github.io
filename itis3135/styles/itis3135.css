@@ -149,9 +149,17 @@ ul {
 
 /* === ID Selectors === */
 
+#academic-background {
+    width: 80%;
+}
+
 #add-course {
     background-color: #205903;
     color: #f2f2f2;
+}
+
+#additional-fact {
+    width: 80%;
 }
 
 #form-top-row {
@@ -189,8 +197,12 @@ ul {
     margin-left: 0px;
 }
 
-#course-list > li {
+#course-list > li{
     margin: 20px auto;
+}
+
+#course-list > li > input {
+    max-width: 70%;
 }
 
 #credit {
@@ -207,6 +219,10 @@ ul {
 
 #first {
     display: block;
+}
+
+#fun-fact {
+    width: 80%;
 }
 
 #identifiers {
@@ -253,12 +269,7 @@ ul {
     min-height: 100vh;
 }
 
-#personal-background,
-#professional-background,
-#academic-background,
-#web-development-background,
-#fun-fact,
-#additional-fact {
+#personal-background {
     width: 80%;
 }
 
@@ -270,6 +281,14 @@ ul {
     width: 40px;
     height: 500px;
     font-size: 20px;
+}
+
+#primary-computer-platform {
+    width: 30%;
+}
+
+#professional-background {
+    width: 80%;
 }
 
 #slides-section {
@@ -308,6 +327,10 @@ ul {
     margin: 0;
     padding: 0;
     font-size: 40px;
+}
+
+#web-development-background {
+    width: 80%;
 }
 
 /* === Media Queries === */
